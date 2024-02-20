@@ -739,11 +739,11 @@ namespace Intersect.Client.MonoGame.Graphics
         {
             var allowedResolutions = new[]
                 {
-                    new Resolution(800, 600), new Resolution(1024, 768), new Resolution(1024, 720),
-                    new Resolution(1280, 720), new Resolution(1280, 768), new Resolution(1280, 1024),
-                    new Resolution(1360, 768), new Resolution(1366, 768), new Resolution(1440, 1050),
-                    new Resolution(1440, 900), new Resolution(1600, 900), new Resolution(1680, 1050),
-                    new Resolution(1920, 1080),
+                    new Resolution(3840, 2160), new Resolution(2048, 1080), new Resolution(1920, 1080),
+                    new Resolution(1680, 1050), new Resolution(1600, 900), new Resolution(1366, 768),
+                    new Resolution(1360, 768), new Resolution(1280, 1024), new Resolution(1280, 768),
+                    new Resolution(1280, 720), new Resolution(1024, 768), new Resolution(1024, 720),
+                    new Resolution(800, 600),
                 }.Concat(
                     mGraphicsDevice.Adapter.SupportedDisplayModes
                         .Select(displayMode => new Resolution(displayMode.Width, displayMode.Height))

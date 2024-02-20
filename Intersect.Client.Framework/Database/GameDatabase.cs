@@ -105,18 +105,18 @@ namespace Intersect.Client.Framework.Database
         /// </summary>
         public virtual void LoadPreferences()
         {
-            MusicVolume = LoadPreference(nameof(MusicVolume), 10);
-            SoundVolume = LoadPreference(nameof(SoundVolume), 15);
+            MusicVolume = LoadPreference(nameof(MusicVolume), 60);
+            SoundVolume = LoadPreference(nameof(SoundVolume), 100);
             TargetResolution = LoadPreference(nameof(TargetResolution), -1);
             TargetFps = LoadPreference(nameof(TargetFps), 0);
-            FullScreen = LoadPreference(nameof(FullScreen), false);
+            FullScreen = LoadPreference(nameof(FullScreen), true);
             EnableLighting = LoadPreference(nameof(EnableLighting), true);
             HideOthersOnWindowOpen = LoadPreference(nameof(HideOthersOnWindowOpen), true);
             AutoToggleChatLog = LoadPreference(nameof(AutoToggleChatLog), false);
             TargetAccountDirection = LoadPreference(nameof(TargetAccountDirection), false);
             StickyTarget = LoadPreference(nameof(StickyTarget), false);
             AutoTurnToTarget = LoadPreference(nameof(AutoTurnToTarget), false);
-            FriendOverheadInfo = LoadPreference(nameof(FriendOverheadInfo), true);
+            FriendOverheadInfo = LoadPreference(nameof(FriendOverheadInfo), false);
             FriendOverheadHpBar = LoadPreference(nameof(FriendOverheadHpBar), false);
             GuildMemberOverheadInfo = LoadPreference(nameof(GuildMemberOverheadInfo), true);
             GuildMemberOverheadHpBar = LoadPreference(nameof(GuildMemberOverheadHpBar), false);

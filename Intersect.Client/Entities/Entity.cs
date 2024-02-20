@@ -1152,7 +1152,7 @@ namespace Intersect.Client.Entities
             var srcRectangle = new FloatRect(frame * frameWidth, spriteRow * frameHeight, frameWidth, frameHeight);
             var destRectangle = new FloatRect(
                 (int)Math.Ceiling(Origin.X - frameWidth / 2f),
-                (int)Math.Ceiling(Origin.Y - frameHeight),
+                (int)Math.Ceiling(Origin.Y - frameHeight / 2f) - 32,
                 srcRectangle.Width,
                 srcRectangle.Height
             );
@@ -1397,7 +1397,7 @@ namespace Intersect.Client.Entities
             var srcRectangle = new FloatRect(frame * frameWidth, spriteRow * frameHeight, frameWidth, frameHeight);
             var destRectangle = new FloatRect(
                 (int)Math.Ceiling(Center.X - frameWidth / 2f),
-                (int)Math.Ceiling(Center.Y - frameHeight / 2f),
+                (int)Math.Ceiling(Origin.Y - frameHeight / 2f) - 32,
                 srcRectangle.Width,
                 srcRectangle.Height
             );
