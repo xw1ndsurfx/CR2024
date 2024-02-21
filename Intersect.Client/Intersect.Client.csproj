@@ -13,13 +13,19 @@
 
   <PropertyGroup>
     <PackageId>AscensionGameDev.Intersect.Client</PackageId>
-    <Description>Game Client - Part of the Intersect 2D Game Creation Suite</Description>
+    <Description>Corps Royaux - MMORPG 2D game client</Description>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <RootNamespace>Intersect.Client</RootNamespace>
-    <AssemblyName>Intersect Client</AssemblyName>
+    <AssemblyName>Corps Royaux</AssemblyName>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>64.ico</ApplicationIcon>
+    <Authors>Entreprises Logiklik Inc.</Authors>
+    <Product>Corps Royaux</Product>
+    <Copyright>Copyright © Entreprises Logiklik Inc. 2024</Copyright>
+    <PackageIcon>intersect-logo-qu.png</PackageIcon>
+    <RepositoryUrl />
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,6 +35,10 @@
     <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
       <_Parameter1>Intersect.SinglePlayer</_Parameter1>
     </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="64.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -60,6 +70,10 @@
     <EmbeddedResource Include="Resources\MonoGame.Framework.dll.config" />
     <EmbeddedResource Include="Resources\openal32.dll" />
     <EmbeddedResource Include="Resources\Shaders\radialgradient.xnb" />
+    <None Include="..\..\..\..\Dropbox\Corps Royaux Officiel\[DESIGN]\[LOGO]\Icon\intersect-logo-qu.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="app.manifest" />
   </ItemGroup>
 
