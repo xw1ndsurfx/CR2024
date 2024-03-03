@@ -28,78 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbout));
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblWebsite = new System.Windows.Forms.Label();
-            this.lblVersion = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            this.SuspendLayout();
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbout));
+            picLogo = new PictureBox();
+            label1 = new Label();
+            lblWebsite = new Label();
+            lblVersion = new Label();
+            ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
+            SuspendLayout();
             // 
             // picLogo
             // 
-            this.picLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLogo.BackgroundImage")));
-            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picLogo.Location = new System.Drawing.Point(13, 3);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(597, 210);
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
+            picLogo.BackgroundImage = (Image)resources.GetObject("picLogo.BackgroundImage");
+            picLogo.BackgroundImageLayout = ImageLayout.Stretch;
+            picLogo.Location = new System.Drawing.Point(34, 12);
+            picLogo.Margin = new Padding(4, 3, 4, 3);
+            picLogo.Name = "picLogo";
+            picLogo.Size = new Size(663, 132);
+            picLogo.TabIndex = 0;
+            picLogo.TabStop = false;
             // 
             // label1
             // 
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 220);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(597, 155);
-            this.label1.TabIndex = 1;
-            this.label1.Text = resources.GetString("label1.Text");
+            label1.ForeColor = System.Drawing.Color.White;
+            label1.Location = new System.Drawing.Point(13, 163);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(696, 179);
+            label1.TabIndex = 1;
+            label1.Text = resources.GetString("label1.Text");
+            label1.Visible = false;
             // 
             // lblWebsite
             // 
-            this.lblWebsite.AutoSize = true;
-            this.lblWebsite.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWebsite.ForeColor = System.Drawing.Color.White;
-            this.lblWebsite.Location = new System.Drawing.Point(16, 388);
-            this.lblWebsite.Name = "lblWebsite";
-            this.lblWebsite.Size = new System.Drawing.Size(494, 13);
-            this.lblWebsite.TabIndex = 2;
-            this.lblWebsite.Text = "Click here to visit the Ascension Game Dev community for support, updates and mor" +
-    "e!";
-            this.lblWebsite.Click += new System.EventHandler(this.lblWebsite_Click);
+            lblWebsite.AutoSize = true;
+            lblWebsite.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            lblWebsite.ForeColor = System.Drawing.Color.White;
+            lblWebsite.Location = new System.Drawing.Point(19, 448);
+            lblWebsite.Margin = new Padding(4, 0, 4, 0);
+            lblWebsite.Name = "lblWebsite";
+            lblWebsite.Size = new Size(494, 13);
+            lblWebsite.TabIndex = 2;
+            lblWebsite.Text = "Click here to visit the Ascension Game Dev community for support, updates and more!";
+            lblWebsite.Visible = false;
+            lblWebsite.Click += lblWebsite_Click;
             // 
             // lblVersion
             // 
-            this.lblVersion.BackColor = System.Drawing.Color.Transparent;
-            this.lblVersion.ForeColor = System.Drawing.Color.White;
-            this.lblVersion.Location = new System.Drawing.Point(305, 198);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(305, 15);
-            this.lblVersion.TabIndex = 3;
-            this.lblVersion.Text = "v. 1.0.0.0";
-            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblVersion.BackColor = System.Drawing.Color.Transparent;
+            lblVersion.ForeColor = System.Drawing.Color.White;
+            lblVersion.Location = new System.Drawing.Point(341, 162);
+            lblVersion.Margin = new Padding(4, 0, 4, 0);
+            lblVersion.Name = "lblVersion";
+            lblVersion.Size = new Size(356, 17);
+            lblVersion.TabIndex = 3;
+            lblVersion.Text = "v. 1.0.0.0";
+            lblVersion.TextAlign = ContentAlignment.MiddleRight;
             // 
             // FrmAbout
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(622, 413);
-            this.Controls.Add(this.lblVersion);
-            this.Controls.Add(this.lblWebsite);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.picLogo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "FrmAbout";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "About";
-            this.Load += new System.EventHandler(this.frmAbout_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(45, 45, 48);
+            ClientSize = new Size(726, 187);
+            Controls.Add(lblVersion);
+            Controls.Add(lblWebsite);
+            Controls.Add(label1);
+            Controls.Add(picLogo);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "FrmAbout";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "About";
+            Load += frmAbout_Load;
+            ((System.ComponentModel.ISupportInitialize)picLogo).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
