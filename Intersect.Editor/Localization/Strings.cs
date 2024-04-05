@@ -829,6 +829,9 @@ namespace Intersect.Editor.Localization
             public static LocalizedString sound = @"Sound:";
 
             public static LocalizedString soundcomplete = @"Complete Sound Playback After Anim Dies";
+            
+            [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+            public static LocalizedString LoopSoundDuringPreview = @"Loop sound during preview";
 
             public static LocalizedString swap = @"Swap Upper/Lower";
 
@@ -1680,6 +1683,8 @@ Tick timer saved in server config.json.";
 
             public static LocalizedString unequip = @"Unequip?";
 
+            public static LocalizedString TriggerCooldown = @"Trigger Cooldown?";
+
         }
 
         public partial struct EventChangeVital
@@ -2067,6 +2072,9 @@ Tick timer saved in server config.json.";
             public static LocalizedString openbank = @"Open Bank";
 
             public static LocalizedString opencrafting = @"Open Crafting Table [{00}]";
+
+            [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+            public static LocalizedString OpenCraftingJournal = @"Open Crafting Journal [{00}]";
 
             public static LocalizedString openshop = @"Open Shop [{00}]";
 
@@ -3088,6 +3096,12 @@ Tick timer saved in server config.json.";
             public static LocalizedString cancel = @"Cancel";
 
             public static LocalizedString label = @"Table:";
+
+            [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+            public static LocalizedString JournalMode = @"Journal Mode?";
+
+            [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+            public static LocalizedString JournalModeTooltip = @"Opens the crafting window without the option for the player to actually craft.";
 
             public static LocalizedString okay = @"Ok";
 
