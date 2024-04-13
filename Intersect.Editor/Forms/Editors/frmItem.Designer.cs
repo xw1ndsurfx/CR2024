@@ -976,7 +976,7 @@ namespace Intersect.Editor.Forms.Editors
             nudPrice.ForeColor = System.Drawing.Color.Gainsboro;
             nudPrice.Location = new System.Drawing.Point(321, 167);
             nudPrice.Margin = new Padding(4, 3, 4, 3);
-            nudPrice.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
+            nudPrice.Maximum = new decimal(new int[] { 1215752191, 23, 0, 0 });
             nudPrice.Name = "nudPrice";
             nudPrice.Size = new Size(253, 23);
             nudPrice.TabIndex = 37;

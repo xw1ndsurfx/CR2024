@@ -30,814 +30,835 @@ namespace Intersect.Editor.Forms.Editors
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmShop));
-            this.grpShops = new DarkUI.Controls.DarkGroupBox();
-            this.btnClearSearch = new DarkUI.Controls.DarkButton();
-            this.txtSearch = new DarkUI.Controls.DarkTextBox();
-            this.lstGameObjects = new Intersect.Editor.Forms.Controls.GameObjectList();
-            this.grpGeneral = new DarkUI.Controls.DarkGroupBox();
-            this.lblSellSound = new System.Windows.Forms.Label();
-            this.cmbSellSound = new DarkUI.Controls.DarkComboBox();
-            this.lblBuySound = new System.Windows.Forms.Label();
-            this.cmbBuySound = new DarkUI.Controls.DarkComboBox();
-            this.btnAddFolder = new DarkUI.Controls.DarkButton();
-            this.lblFolder = new System.Windows.Forms.Label();
-            this.cmbFolder = new DarkUI.Controls.DarkComboBox();
-            this.cmbDefaultCurrency = new DarkUI.Controls.DarkComboBox();
-            this.lblDefaultCurrency = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.txtName = new DarkUI.Controls.DarkTextBox();
-            this.grpItemsSold = new DarkUI.Controls.DarkGroupBox();
-            this.btnItemDown = new DarkUI.Controls.DarkButton();
-            this.btnItemUp = new DarkUI.Controls.DarkButton();
-            this.nudSellCost = new DarkUI.Controls.DarkNumericUpDown();
-            this.cmbSellFor = new DarkUI.Controls.DarkComboBox();
-            this.lblSellFor = new System.Windows.Forms.Label();
-            this.lblSellCost = new System.Windows.Forms.Label();
-            this.btnDelSoldItem = new DarkUI.Controls.DarkButton();
-            this.btnAddSoldItem = new DarkUI.Controls.DarkButton();
-            this.cmbAddSoldItem = new DarkUI.Controls.DarkComboBox();
-            this.lblAddSoldItem = new System.Windows.Forms.Label();
-            this.lstSoldItems = new System.Windows.Forms.ListBox();
-            this.grpItemsBought = new DarkUI.Controls.DarkGroupBox();
-            this.nudBuyAmount = new DarkUI.Controls.DarkNumericUpDown();
-            this.cmbBuyFor = new DarkUI.Controls.DarkComboBox();
-            this.lblBuyFor = new System.Windows.Forms.Label();
-            this.lblBuyAmount = new System.Windows.Forms.Label();
-            this.btnDelBoughtItem = new DarkUI.Controls.DarkButton();
-            this.btnAddBoughtItem = new DarkUI.Controls.DarkButton();
-            this.cmbAddBoughtItem = new DarkUI.Controls.DarkComboBox();
-            this.lblItemBought = new System.Windows.Forms.Label();
-            this.lstBoughtItems = new System.Windows.Forms.ListBox();
-            this.rdoBuyBlacklist = new DarkUI.Controls.DarkRadioButton();
-            this.rdoBuyWhitelist = new DarkUI.Controls.DarkRadioButton();
-            this.pnlContainer = new System.Windows.Forms.Panel();
-            this.btnCancel = new DarkUI.Controls.DarkButton();
-            this.btnSave = new DarkUI.Controls.DarkButton();
-            this.toolStrip = new DarkUI.Controls.DarkToolStrip();
-            this.toolStripItemNew = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripItemDelete = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnAlphabetical = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripItemCopy = new System.Windows.Forms.ToolStripButton();
-            this.toolStripItemPaste = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripItemUndo = new System.Windows.Forms.ToolStripButton();
-            this.grpShops.SuspendLayout();
-            this.grpGeneral.SuspendLayout();
-            this.grpItemsSold.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSellCost)).BeginInit();
-            this.grpItemsBought.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBuyAmount)).BeginInit();
-            this.pnlContainer.SuspendLayout();
-            this.toolStrip.SuspendLayout();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmShop));
+            grpShops = new DarkGroupBox();
+            btnClearSearch = new DarkButton();
+            txtSearch = new DarkTextBox();
+            lstGameObjects = new Controls.GameObjectList();
+            grpGeneral = new DarkGroupBox();
+            lblSellSound = new Label();
+            cmbSellSound = new DarkComboBox();
+            lblBuySound = new Label();
+            cmbBuySound = new DarkComboBox();
+            btnAddFolder = new DarkButton();
+            lblFolder = new Label();
+            cmbFolder = new DarkComboBox();
+            cmbDefaultCurrency = new DarkComboBox();
+            lblDefaultCurrency = new Label();
+            lblName = new Label();
+            txtName = new DarkTextBox();
+            grpItemsSold = new DarkGroupBox();
+            btnItemDown = new DarkButton();
+            btnItemUp = new DarkButton();
+            nudSellCost = new DarkNumericUpDown();
+            cmbSellFor = new DarkComboBox();
+            lblSellFor = new Label();
+            lblSellCost = new Label();
+            btnDelSoldItem = new DarkButton();
+            btnAddSoldItem = new DarkButton();
+            cmbAddSoldItem = new DarkComboBox();
+            lblAddSoldItem = new Label();
+            lstSoldItems = new ListBox();
+            grpItemsBought = new DarkGroupBox();
+            nudBuyAmount = new DarkNumericUpDown();
+            cmbBuyFor = new DarkComboBox();
+            lblBuyFor = new Label();
+            lblBuyAmount = new Label();
+            btnDelBoughtItem = new DarkButton();
+            btnAddBoughtItem = new DarkButton();
+            cmbAddBoughtItem = new DarkComboBox();
+            lblItemBought = new Label();
+            lstBoughtItems = new ListBox();
+            rdoBuyBlacklist = new DarkRadioButton();
+            rdoBuyWhitelist = new DarkRadioButton();
+            pnlContainer = new Panel();
+            btnCancel = new DarkButton();
+            btnSave = new DarkButton();
+            toolStrip = new DarkToolStrip();
+            toolStripItemNew = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            toolStripItemDelete = new ToolStripButton();
+            toolStripSeparator2 = new ToolStripSeparator();
+            btnAlphabetical = new ToolStripButton();
+            toolStripSeparator4 = new ToolStripSeparator();
+            toolStripItemCopy = new ToolStripButton();
+            toolStripItemPaste = new ToolStripButton();
+            toolStripSeparator3 = new ToolStripSeparator();
+            toolStripItemUndo = new ToolStripButton();
+            grpShops.SuspendLayout();
+            grpGeneral.SuspendLayout();
+            grpItemsSold.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudSellCost).BeginInit();
+            grpItemsBought.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudBuyAmount).BeginInit();
+            pnlContainer.SuspendLayout();
+            toolStrip.SuspendLayout();
+            SuspendLayout();
             // 
             // grpShops
             // 
-            this.grpShops.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.grpShops.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.grpShops.Controls.Add(this.btnClearSearch);
-            this.grpShops.Controls.Add(this.txtSearch);
-            this.grpShops.Controls.Add(this.lstGameObjects);
-            this.grpShops.ForeColor = System.Drawing.Color.Gainsboro;
-            this.grpShops.Location = new System.Drawing.Point(12, 34);
-            this.grpShops.Name = "grpShops";
-            this.grpShops.Size = new System.Drawing.Size(203, 502);
-            this.grpShops.TabIndex = 15;
-            this.grpShops.TabStop = false;
-            this.grpShops.Text = "Shops";
+            grpShops.BackColor = System.Drawing.Color.FromArgb(45, 45, 48);
+            grpShops.BorderColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            grpShops.Controls.Add(btnClearSearch);
+            grpShops.Controls.Add(txtSearch);
+            grpShops.Controls.Add(lstGameObjects);
+            grpShops.ForeColor = System.Drawing.Color.Gainsboro;
+            grpShops.Location = new System.Drawing.Point(14, 39);
+            grpShops.Margin = new Padding(4, 3, 4, 3);
+            grpShops.Name = "grpShops";
+            grpShops.Padding = new Padding(4, 3, 4, 3);
+            grpShops.Size = new Size(237, 579);
+            grpShops.TabIndex = 15;
+            grpShops.TabStop = false;
+            grpShops.Text = "Shops";
             // 
             // btnClearSearch
             // 
-            this.btnClearSearch.Location = new System.Drawing.Point(179, 20);
-            this.btnClearSearch.Name = "btnClearSearch";
-            this.btnClearSearch.Padding = new System.Windows.Forms.Padding(5);
-            this.btnClearSearch.Size = new System.Drawing.Size(18, 20);
-            this.btnClearSearch.TabIndex = 37;
-            this.btnClearSearch.Text = "X";
-            this.btnClearSearch.Click += new System.EventHandler(this.btnClearSearch_Click);
+            btnClearSearch.Location = new System.Drawing.Point(209, 23);
+            btnClearSearch.Margin = new Padding(4, 3, 4, 3);
+            btnClearSearch.Name = "btnClearSearch";
+            btnClearSearch.Padding = new Padding(6, 6, 6, 6);
+            btnClearSearch.Size = new Size(21, 23);
+            btnClearSearch.TabIndex = 37;
+            btnClearSearch.Text = "X";
+            btnClearSearch.Click += btnClearSearch_Click;
             // 
             // txtSearch
             // 
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.txtSearch.Location = new System.Drawing.Point(6, 20);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(167, 20);
-            this.txtSearch.TabIndex = 36;
-            this.txtSearch.Text = "Search...";
-            this.txtSearch.Click += new System.EventHandler(this.txtSearch_Click);
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
-            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
+            txtSearch.BackColor = System.Drawing.Color.FromArgb(69, 73, 74);
+            txtSearch.BorderStyle = BorderStyle.FixedSingle;
+            txtSearch.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            txtSearch.Location = new System.Drawing.Point(7, 23);
+            txtSearch.Margin = new Padding(4, 3, 4, 3);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(194, 23);
+            txtSearch.TabIndex = 36;
+            txtSearch.Text = "Search...";
+            txtSearch.Click += txtSearch_Click;
+            txtSearch.TextChanged += txtSearch_TextChanged;
+            txtSearch.Enter += txtSearch_Enter;
+            txtSearch.Leave += txtSearch_Leave;
             // 
             // lstGameObjects
             // 
-            this.lstGameObjects.AllowDrop = true;
-            this.lstGameObjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.lstGameObjects.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstGameObjects.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lstGameObjects.HideSelection = false;
-            this.lstGameObjects.ImageIndex = 0;
-            this.lstGameObjects.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.lstGameObjects.Location = new System.Drawing.Point(6, 46);
-            this.lstGameObjects.Name = "lstGameObjects";
-            this.lstGameObjects.SelectedImageIndex = 0;
-            this.lstGameObjects.Size = new System.Drawing.Size(191, 446);
-            this.lstGameObjects.TabIndex = 35;
+            lstGameObjects.AllowDrop = true;
+            lstGameObjects.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
+            lstGameObjects.BorderStyle = BorderStyle.None;
+            lstGameObjects.ForeColor = System.Drawing.Color.Gainsboro;
+            lstGameObjects.HideSelection = false;
+            lstGameObjects.ImageIndex = 0;
+            lstGameObjects.LineColor = System.Drawing.Color.FromArgb(150, 150, 150);
+            lstGameObjects.Location = new System.Drawing.Point(7, 53);
+            lstGameObjects.Margin = new Padding(4, 3, 4, 3);
+            lstGameObjects.Name = "lstGameObjects";
+            lstGameObjects.SelectedImageIndex = 0;
+            lstGameObjects.Size = new Size(223, 515);
+            lstGameObjects.TabIndex = 35;
             // 
             // grpGeneral
             // 
-            this.grpGeneral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.grpGeneral.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.grpGeneral.Controls.Add(this.lblSellSound);
-            this.grpGeneral.Controls.Add(this.cmbSellSound);
-            this.grpGeneral.Controls.Add(this.lblBuySound);
-            this.grpGeneral.Controls.Add(this.cmbBuySound);
-            this.grpGeneral.Controls.Add(this.btnAddFolder);
-            this.grpGeneral.Controls.Add(this.lblFolder);
-            this.grpGeneral.Controls.Add(this.cmbFolder);
-            this.grpGeneral.Controls.Add(this.cmbDefaultCurrency);
-            this.grpGeneral.Controls.Add(this.lblDefaultCurrency);
-            this.grpGeneral.Controls.Add(this.lblName);
-            this.grpGeneral.Controls.Add(this.txtName);
-            this.grpGeneral.ForeColor = System.Drawing.Color.Gainsboro;
-            this.grpGeneral.Location = new System.Drawing.Point(-1, 2);
-            this.grpGeneral.Name = "grpGeneral";
-            this.grpGeneral.Size = new System.Drawing.Size(523, 104);
-            this.grpGeneral.TabIndex = 16;
-            this.grpGeneral.TabStop = false;
-            this.grpGeneral.Text = "General";
+            grpGeneral.BackColor = System.Drawing.Color.FromArgb(45, 45, 48);
+            grpGeneral.BorderColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            grpGeneral.Controls.Add(lblSellSound);
+            grpGeneral.Controls.Add(cmbSellSound);
+            grpGeneral.Controls.Add(lblBuySound);
+            grpGeneral.Controls.Add(cmbBuySound);
+            grpGeneral.Controls.Add(btnAddFolder);
+            grpGeneral.Controls.Add(lblFolder);
+            grpGeneral.Controls.Add(cmbFolder);
+            grpGeneral.Controls.Add(cmbDefaultCurrency);
+            grpGeneral.Controls.Add(lblDefaultCurrency);
+            grpGeneral.Controls.Add(lblName);
+            grpGeneral.Controls.Add(txtName);
+            grpGeneral.ForeColor = System.Drawing.Color.Gainsboro;
+            grpGeneral.Location = new System.Drawing.Point(-1, 2);
+            grpGeneral.Margin = new Padding(4, 3, 4, 3);
+            grpGeneral.Name = "grpGeneral";
+            grpGeneral.Padding = new Padding(4, 3, 4, 3);
+            grpGeneral.Size = new Size(610, 120);
+            grpGeneral.TabIndex = 16;
+            grpGeneral.TabStop = false;
+            grpGeneral.Text = "General";
             // 
             // lblSellSound
             // 
-            this.lblSellSound.AutoSize = true;
-            this.lblSellSound.Location = new System.Drawing.Point(270, 76);
-            this.lblSellSound.Name = "lblSellSound";
-            this.lblSellSound.Size = new System.Drawing.Size(61, 13);
-            this.lblSellSound.TabIndex = 59;
-            this.lblSellSound.Text = "Sell Sound:";
+            lblSellSound.AutoSize = true;
+            lblSellSound.Location = new System.Drawing.Point(315, 88);
+            lblSellSound.Margin = new Padding(4, 0, 4, 0);
+            lblSellSound.Name = "lblSellSound";
+            lblSellSound.Size = new Size(65, 15);
+            lblSellSound.TabIndex = 59;
+            lblSellSound.Text = "Sell Sound:";
             // 
             // cmbSellSound
             // 
-            this.cmbSellSound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
-            this.cmbSellSound.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.cmbSellSound.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.cmbSellSound.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.cmbSellSound.DrawDropdownHoverOutline = false;
-            this.cmbSellSound.DrawFocusRectangle = false;
-            this.cmbSellSound.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbSellSound.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSellSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSellSound.ForeColor = System.Drawing.Color.Gainsboro;
-            this.cmbSellSound.FormattingEnabled = true;
-            this.cmbSellSound.Items.AddRange(new object[] {
-            "None"});
-            this.cmbSellSound.Location = new System.Drawing.Point(338, 72);
-            this.cmbSellSound.Name = "cmbSellSound";
-            this.cmbSellSound.Size = new System.Drawing.Size(179, 21);
-            this.cmbSellSound.TabIndex = 58;
-            this.cmbSellSound.Text = "None";
-            this.cmbSellSound.TextPadding = new System.Windows.Forms.Padding(2);
-            this.cmbSellSound.SelectedIndexChanged += new System.EventHandler(this.cmbSellSound_SelectedIndexChanged);
+            cmbSellSound.BackColor = System.Drawing.Color.FromArgb(69, 73, 74);
+            cmbSellSound.BorderColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            cmbSellSound.BorderStyle = ButtonBorderStyle.Solid;
+            cmbSellSound.ButtonColor = System.Drawing.Color.FromArgb(43, 43, 43);
+            cmbSellSound.DrawDropdownHoverOutline = false;
+            cmbSellSound.DrawFocusRectangle = false;
+            cmbSellSound.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbSellSound.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSellSound.FlatStyle = FlatStyle.Flat;
+            cmbSellSound.ForeColor = System.Drawing.Color.Gainsboro;
+            cmbSellSound.FormattingEnabled = true;
+            cmbSellSound.Items.AddRange(new object[] { "None" });
+            cmbSellSound.Location = new System.Drawing.Point(394, 83);
+            cmbSellSound.Margin = new Padding(4, 3, 4, 3);
+            cmbSellSound.Name = "cmbSellSound";
+            cmbSellSound.Size = new Size(208, 24);
+            cmbSellSound.TabIndex = 58;
+            cmbSellSound.Text = "None";
+            cmbSellSound.TextPadding = new Padding(2);
+            cmbSellSound.SelectedIndexChanged += cmbSellSound_SelectedIndexChanged;
             // 
             // lblBuySound
             // 
-            this.lblBuySound.AutoSize = true;
-            this.lblBuySound.Location = new System.Drawing.Point(270, 49);
-            this.lblBuySound.Name = "lblBuySound";
-            this.lblBuySound.Size = new System.Drawing.Size(62, 13);
-            this.lblBuySound.TabIndex = 57;
-            this.lblBuySound.Text = "Buy Sound:";
+            lblBuySound.AutoSize = true;
+            lblBuySound.Location = new System.Drawing.Point(315, 57);
+            lblBuySound.Margin = new Padding(4, 0, 4, 0);
+            lblBuySound.Name = "lblBuySound";
+            lblBuySound.Size = new Size(67, 15);
+            lblBuySound.TabIndex = 57;
+            lblBuySound.Text = "Buy Sound:";
             // 
             // cmbBuySound
             // 
-            this.cmbBuySound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
-            this.cmbBuySound.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.cmbBuySound.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.cmbBuySound.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.cmbBuySound.DrawDropdownHoverOutline = false;
-            this.cmbBuySound.DrawFocusRectangle = false;
-            this.cmbBuySound.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbBuySound.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBuySound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbBuySound.ForeColor = System.Drawing.Color.Gainsboro;
-            this.cmbBuySound.FormattingEnabled = true;
-            this.cmbBuySound.Items.AddRange(new object[] {
-            "None"});
-            this.cmbBuySound.Location = new System.Drawing.Point(338, 45);
-            this.cmbBuySound.Name = "cmbBuySound";
-            this.cmbBuySound.Size = new System.Drawing.Size(179, 21);
-            this.cmbBuySound.TabIndex = 56;
-            this.cmbBuySound.Text = "None";
-            this.cmbBuySound.TextPadding = new System.Windows.Forms.Padding(2);
-            this.cmbBuySound.SelectedIndexChanged += new System.EventHandler(this.cmbBuySound_SelectedIndexChanged);
+            cmbBuySound.BackColor = System.Drawing.Color.FromArgb(69, 73, 74);
+            cmbBuySound.BorderColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            cmbBuySound.BorderStyle = ButtonBorderStyle.Solid;
+            cmbBuySound.ButtonColor = System.Drawing.Color.FromArgb(43, 43, 43);
+            cmbBuySound.DrawDropdownHoverOutline = false;
+            cmbBuySound.DrawFocusRectangle = false;
+            cmbBuySound.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbBuySound.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBuySound.FlatStyle = FlatStyle.Flat;
+            cmbBuySound.ForeColor = System.Drawing.Color.Gainsboro;
+            cmbBuySound.FormattingEnabled = true;
+            cmbBuySound.Items.AddRange(new object[] { "None" });
+            cmbBuySound.Location = new System.Drawing.Point(394, 52);
+            cmbBuySound.Margin = new Padding(4, 3, 4, 3);
+            cmbBuySound.Name = "cmbBuySound";
+            cmbBuySound.Size = new Size(208, 24);
+            cmbBuySound.TabIndex = 56;
+            cmbBuySound.Text = "None";
+            cmbBuySound.TextPadding = new Padding(2);
+            cmbBuySound.SelectedIndexChanged += cmbBuySound_SelectedIndexChanged;
             // 
             // btnAddFolder
             // 
-            this.btnAddFolder.Location = new System.Drawing.Point(197, 41);
-            this.btnAddFolder.Name = "btnAddFolder";
-            this.btnAddFolder.Padding = new System.Windows.Forms.Padding(5);
-            this.btnAddFolder.Size = new System.Drawing.Size(18, 21);
-            this.btnAddFolder.TabIndex = 55;
-            this.btnAddFolder.Text = "+";
-            this.btnAddFolder.Click += new System.EventHandler(this.btnAddFolder_Click);
+            btnAddFolder.Location = new System.Drawing.Point(230, 47);
+            btnAddFolder.Margin = new Padding(4, 3, 4, 3);
+            btnAddFolder.Name = "btnAddFolder";
+            btnAddFolder.Padding = new Padding(6, 6, 6, 6);
+            btnAddFolder.Size = new Size(21, 24);
+            btnAddFolder.TabIndex = 55;
+            btnAddFolder.Text = "+";
+            btnAddFolder.Click += btnAddFolder_Click;
             // 
             // lblFolder
             // 
-            this.lblFolder.AutoSize = true;
-            this.lblFolder.Location = new System.Drawing.Point(6, 44);
-            this.lblFolder.Name = "lblFolder";
-            this.lblFolder.Size = new System.Drawing.Size(39, 13);
-            this.lblFolder.TabIndex = 54;
-            this.lblFolder.Text = "Folder:";
+            lblFolder.AutoSize = true;
+            lblFolder.Location = new System.Drawing.Point(7, 51);
+            lblFolder.Margin = new Padding(4, 0, 4, 0);
+            lblFolder.Name = "lblFolder";
+            lblFolder.Size = new Size(43, 15);
+            lblFolder.TabIndex = 54;
+            lblFolder.Text = "Folder:";
             // 
             // cmbFolder
             // 
-            this.cmbFolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
-            this.cmbFolder.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.cmbFolder.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.cmbFolder.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.cmbFolder.DrawDropdownHoverOutline = false;
-            this.cmbFolder.DrawFocusRectangle = false;
-            this.cmbFolder.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbFolder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbFolder.ForeColor = System.Drawing.Color.Gainsboro;
-            this.cmbFolder.FormattingEnabled = true;
-            this.cmbFolder.Location = new System.Drawing.Point(60, 41);
-            this.cmbFolder.Name = "cmbFolder";
-            this.cmbFolder.Size = new System.Drawing.Size(131, 21);
-            this.cmbFolder.TabIndex = 53;
-            this.cmbFolder.Text = null;
-            this.cmbFolder.TextPadding = new System.Windows.Forms.Padding(2);
-            this.cmbFolder.SelectedIndexChanged += new System.EventHandler(this.cmbFolder_SelectedIndexChanged);
+            cmbFolder.BackColor = System.Drawing.Color.FromArgb(69, 73, 74);
+            cmbFolder.BorderColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            cmbFolder.BorderStyle = ButtonBorderStyle.Solid;
+            cmbFolder.ButtonColor = System.Drawing.Color.FromArgb(43, 43, 43);
+            cmbFolder.DrawDropdownHoverOutline = false;
+            cmbFolder.DrawFocusRectangle = false;
+            cmbFolder.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbFolder.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbFolder.FlatStyle = FlatStyle.Flat;
+            cmbFolder.ForeColor = System.Drawing.Color.Gainsboro;
+            cmbFolder.FormattingEnabled = true;
+            cmbFolder.Location = new System.Drawing.Point(70, 47);
+            cmbFolder.Margin = new Padding(4, 3, 4, 3);
+            cmbFolder.Name = "cmbFolder";
+            cmbFolder.Size = new Size(152, 24);
+            cmbFolder.TabIndex = 53;
+            cmbFolder.Text = null;
+            cmbFolder.TextPadding = new Padding(2);
+            cmbFolder.SelectedIndexChanged += cmbFolder_SelectedIndexChanged;
             // 
             // cmbDefaultCurrency
             // 
-            this.cmbDefaultCurrency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
-            this.cmbDefaultCurrency.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.cmbDefaultCurrency.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.cmbDefaultCurrency.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.cmbDefaultCurrency.DrawDropdownHoverOutline = false;
-            this.cmbDefaultCurrency.DrawFocusRectangle = false;
-            this.cmbDefaultCurrency.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbDefaultCurrency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDefaultCurrency.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbDefaultCurrency.ForeColor = System.Drawing.Color.Gainsboro;
-            this.cmbDefaultCurrency.FormattingEnabled = true;
-            this.cmbDefaultCurrency.Location = new System.Drawing.Point(338, 17);
-            this.cmbDefaultCurrency.Name = "cmbDefaultCurrency";
-            this.cmbDefaultCurrency.Size = new System.Drawing.Size(179, 21);
-            this.cmbDefaultCurrency.TabIndex = 8;
-            this.cmbDefaultCurrency.Text = null;
-            this.cmbDefaultCurrency.TextPadding = new System.Windows.Forms.Padding(2);
-            this.cmbDefaultCurrency.SelectedIndexChanged += new System.EventHandler(this.cmbDefaultCurrency_SelectedIndexChanged);
+            cmbDefaultCurrency.BackColor = System.Drawing.Color.FromArgb(69, 73, 74);
+            cmbDefaultCurrency.BorderColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            cmbDefaultCurrency.BorderStyle = ButtonBorderStyle.Solid;
+            cmbDefaultCurrency.ButtonColor = System.Drawing.Color.FromArgb(43, 43, 43);
+            cmbDefaultCurrency.DrawDropdownHoverOutline = false;
+            cmbDefaultCurrency.DrawFocusRectangle = false;
+            cmbDefaultCurrency.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbDefaultCurrency.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbDefaultCurrency.FlatStyle = FlatStyle.Flat;
+            cmbDefaultCurrency.ForeColor = System.Drawing.Color.Gainsboro;
+            cmbDefaultCurrency.FormattingEnabled = true;
+            cmbDefaultCurrency.Location = new System.Drawing.Point(394, 20);
+            cmbDefaultCurrency.Margin = new Padding(4, 3, 4, 3);
+            cmbDefaultCurrency.Name = "cmbDefaultCurrency";
+            cmbDefaultCurrency.Size = new Size(208, 24);
+            cmbDefaultCurrency.TabIndex = 8;
+            cmbDefaultCurrency.Text = null;
+            cmbDefaultCurrency.TextPadding = new Padding(2);
+            cmbDefaultCurrency.SelectedIndexChanged += cmbDefaultCurrency_SelectedIndexChanged;
             // 
             // lblDefaultCurrency
             // 
-            this.lblDefaultCurrency.AutoSize = true;
-            this.lblDefaultCurrency.Location = new System.Drawing.Point(247, 20);
-            this.lblDefaultCurrency.Name = "lblDefaultCurrency";
-            this.lblDefaultCurrency.Size = new System.Drawing.Size(92, 13);
-            this.lblDefaultCurrency.TabIndex = 2;
-            this.lblDefaultCurrency.Text = "Default Currency: ";
+            lblDefaultCurrency.AutoSize = true;
+            lblDefaultCurrency.Location = new System.Drawing.Point(288, 23);
+            lblDefaultCurrency.Margin = new Padding(4, 0, 4, 0);
+            lblDefaultCurrency.Name = "lblDefaultCurrency";
+            lblDefaultCurrency.Size = new Size(102, 15);
+            lblDefaultCurrency.TabIndex = 2;
+            lblDefaultCurrency.Text = "Default Currency: ";
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(6, 17);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
-            this.lblName.TabIndex = 1;
-            this.lblName.Text = "Name:";
+            lblName.AutoSize = true;
+            lblName.Location = new System.Drawing.Point(7, 20);
+            lblName.Margin = new Padding(4, 0, 4, 0);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(42, 15);
+            lblName.TabIndex = 1;
+            lblName.Text = "Name:";
             // 
             // txtName
             // 
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.txtName.Location = new System.Drawing.Point(60, 16);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(155, 20);
-            this.txtName.TabIndex = 0;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            txtName.BackColor = System.Drawing.Color.FromArgb(69, 73, 74);
+            txtName.BorderStyle = BorderStyle.FixedSingle;
+            txtName.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            txtName.Location = new System.Drawing.Point(70, 18);
+            txtName.Margin = new Padding(4, 3, 4, 3);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(180, 23);
+            txtName.TabIndex = 0;
+            txtName.TextChanged += txtName_TextChanged;
             // 
             // grpItemsSold
             // 
-            this.grpItemsSold.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.grpItemsSold.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.grpItemsSold.Controls.Add(this.btnItemDown);
-            this.grpItemsSold.Controls.Add(this.btnItemUp);
-            this.grpItemsSold.Controls.Add(this.nudSellCost);
-            this.grpItemsSold.Controls.Add(this.cmbSellFor);
-            this.grpItemsSold.Controls.Add(this.lblSellFor);
-            this.grpItemsSold.Controls.Add(this.lblSellCost);
-            this.grpItemsSold.Controls.Add(this.btnDelSoldItem);
-            this.grpItemsSold.Controls.Add(this.btnAddSoldItem);
-            this.grpItemsSold.Controls.Add(this.cmbAddSoldItem);
-            this.grpItemsSold.Controls.Add(this.lblAddSoldItem);
-            this.grpItemsSold.Controls.Add(this.lstSoldItems);
-            this.grpItemsSold.ForeColor = System.Drawing.Color.Gainsboro;
-            this.grpItemsSold.Location = new System.Drawing.Point(0, 112);
-            this.grpItemsSold.Name = "grpItemsSold";
-            this.grpItemsSold.Size = new System.Drawing.Size(258, 390);
-            this.grpItemsSold.TabIndex = 17;
-            this.grpItemsSold.TabStop = false;
-            this.grpItemsSold.Text = "Items Sold";
+            grpItemsSold.BackColor = System.Drawing.Color.FromArgb(45, 45, 48);
+            grpItemsSold.BorderColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            grpItemsSold.Controls.Add(btnItemDown);
+            grpItemsSold.Controls.Add(btnItemUp);
+            grpItemsSold.Controls.Add(nudSellCost);
+            grpItemsSold.Controls.Add(cmbSellFor);
+            grpItemsSold.Controls.Add(lblSellFor);
+            grpItemsSold.Controls.Add(lblSellCost);
+            grpItemsSold.Controls.Add(btnDelSoldItem);
+            grpItemsSold.Controls.Add(btnAddSoldItem);
+            grpItemsSold.Controls.Add(cmbAddSoldItem);
+            grpItemsSold.Controls.Add(lblAddSoldItem);
+            grpItemsSold.Controls.Add(lstSoldItems);
+            grpItemsSold.ForeColor = System.Drawing.Color.Gainsboro;
+            grpItemsSold.Location = new System.Drawing.Point(0, 129);
+            grpItemsSold.Margin = new Padding(4, 3, 4, 3);
+            grpItemsSold.Name = "grpItemsSold";
+            grpItemsSold.Padding = new Padding(4, 3, 4, 3);
+            grpItemsSold.Size = new Size(301, 450);
+            grpItemsSold.TabIndex = 17;
+            grpItemsSold.TabStop = false;
+            grpItemsSold.Text = "Items Sold";
             // 
             // btnItemDown
             // 
-            this.btnItemDown.Location = new System.Drawing.Point(233, 190);
-            this.btnItemDown.Name = "btnItemDown";
-            this.btnItemDown.Padding = new System.Windows.Forms.Padding(5);
-            this.btnItemDown.Size = new System.Drawing.Size(22, 40);
-            this.btnItemDown.TabIndex = 46;
-            this.btnItemDown.Text = "▼";
-            this.btnItemDown.Click += new System.EventHandler(this.btnItemDown_Click);
+            btnItemDown.Location = new System.Drawing.Point(272, 219);
+            btnItemDown.Margin = new Padding(4, 3, 4, 3);
+            btnItemDown.Name = "btnItemDown";
+            btnItemDown.Padding = new Padding(6, 6, 6, 6);
+            btnItemDown.Size = new Size(26, 46);
+            btnItemDown.TabIndex = 46;
+            btnItemDown.Text = "▼";
+            btnItemDown.Click += btnItemDown_Click;
             // 
             // btnItemUp
             // 
-            this.btnItemUp.Location = new System.Drawing.Point(233, 20);
-            this.btnItemUp.Name = "btnItemUp";
-            this.btnItemUp.Padding = new System.Windows.Forms.Padding(5);
-            this.btnItemUp.Size = new System.Drawing.Size(22, 40);
-            this.btnItemUp.TabIndex = 45;
-            this.btnItemUp.Text = "▲";
-            this.btnItemUp.Click += new System.EventHandler(this.btnItemUp_Click);
+            btnItemUp.Location = new System.Drawing.Point(272, 23);
+            btnItemUp.Margin = new Padding(4, 3, 4, 3);
+            btnItemUp.Name = "btnItemUp";
+            btnItemUp.Padding = new Padding(6, 6, 6, 6);
+            btnItemUp.Size = new Size(26, 46);
+            btnItemUp.TabIndex = 45;
+            btnItemUp.Text = "▲";
+            btnItemUp.Click += btnItemUp_Click;
             // 
             // nudSellCost
             // 
-            this.nudSellCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
-            this.nudSellCost.ForeColor = System.Drawing.Color.Gainsboro;
-            this.nudSellCost.Location = new System.Drawing.Point(81, 325);
-            this.nudSellCost.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.nudSellCost.Name = "nudSellCost";
-            this.nudSellCost.Size = new System.Drawing.Size(171, 20);
-            this.nudSellCost.TabIndex = 44;
-            this.nudSellCost.Value = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
+            nudSellCost.BackColor = System.Drawing.Color.FromArgb(69, 73, 74);
+            nudSellCost.ForeColor = System.Drawing.Color.Gainsboro;
+            nudSellCost.Location = new System.Drawing.Point(94, 375);
+            nudSellCost.Margin = new Padding(4, 3, 4, 3);
+            nudSellCost.Maximum = new decimal(new int[] { 1215752191, 23, 0, 0 });
+            nudSellCost.Name = "nudSellCost";
+            nudSellCost.Size = new Size(200, 23);
+            nudSellCost.TabIndex = 44;
+            nudSellCost.Value = new decimal(new int[] { 0, 0, 0, 0 });
             // 
             // cmbSellFor
             // 
-            this.cmbSellFor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
-            this.cmbSellFor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.cmbSellFor.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.cmbSellFor.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.cmbSellFor.DrawDropdownHoverOutline = false;
-            this.cmbSellFor.DrawFocusRectangle = false;
-            this.cmbSellFor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbSellFor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSellFor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSellFor.ForeColor = System.Drawing.Color.Gainsboro;
-            this.cmbSellFor.FormattingEnabled = true;
-            this.cmbSellFor.Location = new System.Drawing.Point(6, 296);
-            this.cmbSellFor.Name = "cmbSellFor";
-            this.cmbSellFor.Size = new System.Drawing.Size(246, 21);
-            this.cmbSellFor.TabIndex = 11;
-            this.cmbSellFor.Text = null;
-            this.cmbSellFor.TextPadding = new System.Windows.Forms.Padding(2);
+            cmbSellFor.BackColor = System.Drawing.Color.FromArgb(69, 73, 74);
+            cmbSellFor.BorderColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            cmbSellFor.BorderStyle = ButtonBorderStyle.Solid;
+            cmbSellFor.ButtonColor = System.Drawing.Color.FromArgb(43, 43, 43);
+            cmbSellFor.DrawDropdownHoverOutline = false;
+            cmbSellFor.DrawFocusRectangle = false;
+            cmbSellFor.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbSellFor.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSellFor.FlatStyle = FlatStyle.Flat;
+            cmbSellFor.ForeColor = System.Drawing.Color.Gainsboro;
+            cmbSellFor.FormattingEnabled = true;
+            cmbSellFor.Location = new System.Drawing.Point(7, 342);
+            cmbSellFor.Margin = new Padding(4, 3, 4, 3);
+            cmbSellFor.Name = "cmbSellFor";
+            cmbSellFor.Size = new Size(286, 24);
+            cmbSellFor.TabIndex = 11;
+            cmbSellFor.Text = null;
+            cmbSellFor.TextPadding = new Padding(2);
             // 
             // lblSellFor
             // 
-            this.lblSellFor.AutoSize = true;
-            this.lblSellFor.Location = new System.Drawing.Point(7, 280);
-            this.lblSellFor.Name = "lblSellFor";
-            this.lblSellFor.Size = new System.Drawing.Size(45, 13);
-            this.lblSellFor.TabIndex = 10;
-            this.lblSellFor.Text = "Sell For:";
+            lblSellFor.AutoSize = true;
+            lblSellFor.Location = new System.Drawing.Point(8, 323);
+            lblSellFor.Margin = new Padding(4, 0, 4, 0);
+            lblSellFor.Name = "lblSellFor";
+            lblSellFor.Size = new Size(48, 15);
+            lblSellFor.TabIndex = 10;
+            lblSellFor.Text = "Sell For:";
             // 
             // lblSellCost
             // 
-            this.lblSellCost.AutoSize = true;
-            this.lblSellCost.Location = new System.Drawing.Point(7, 327);
-            this.lblSellCost.Name = "lblSellCost";
-            this.lblSellCost.Size = new System.Drawing.Size(51, 13);
-            this.lblSellCost.TabIndex = 5;
-            this.lblSellCost.Text = "Sell Cost:";
+            lblSellCost.AutoSize = true;
+            lblSellCost.Location = new System.Drawing.Point(8, 377);
+            lblSellCost.Margin = new Padding(4, 0, 4, 0);
+            lblSellCost.Name = "lblSellCost";
+            lblSellCost.Size = new Size(55, 15);
+            lblSellCost.TabIndex = 5;
+            lblSellCost.Text = "Sell Cost:";
             // 
             // btnDelSoldItem
             // 
-            this.btnDelSoldItem.Location = new System.Drawing.Point(135, 357);
-            this.btnDelSoldItem.Name = "btnDelSoldItem";
-            this.btnDelSoldItem.Padding = new System.Windows.Forms.Padding(5);
-            this.btnDelSoldItem.Size = new System.Drawing.Size(117, 23);
-            this.btnDelSoldItem.TabIndex = 4;
-            this.btnDelSoldItem.Text = "Remove Selected";
-            this.btnDelSoldItem.Click += new System.EventHandler(this.btnDelSoldItem_Click);
+            btnDelSoldItem.Location = new System.Drawing.Point(158, 412);
+            btnDelSoldItem.Margin = new Padding(4, 3, 4, 3);
+            btnDelSoldItem.Name = "btnDelSoldItem";
+            btnDelSoldItem.Padding = new Padding(6, 6, 6, 6);
+            btnDelSoldItem.Size = new Size(136, 27);
+            btnDelSoldItem.TabIndex = 4;
+            btnDelSoldItem.Text = "Remove Selected";
+            btnDelSoldItem.Click += btnDelSoldItem_Click;
             // 
             // btnAddSoldItem
             // 
-            this.btnAddSoldItem.Location = new System.Drawing.Point(6, 357);
-            this.btnAddSoldItem.Name = "btnAddSoldItem";
-            this.btnAddSoldItem.Padding = new System.Windows.Forms.Padding(5);
-            this.btnAddSoldItem.Size = new System.Drawing.Size(117, 23);
-            this.btnAddSoldItem.TabIndex = 3;
-            this.btnAddSoldItem.Text = "Add Selected";
-            this.btnAddSoldItem.Click += new System.EventHandler(this.btnAddSoldItem_Click);
+            btnAddSoldItem.Location = new System.Drawing.Point(7, 412);
+            btnAddSoldItem.Margin = new Padding(4, 3, 4, 3);
+            btnAddSoldItem.Name = "btnAddSoldItem";
+            btnAddSoldItem.Padding = new Padding(6, 6, 6, 6);
+            btnAddSoldItem.Size = new Size(136, 27);
+            btnAddSoldItem.TabIndex = 3;
+            btnAddSoldItem.Text = "Add Selected";
+            btnAddSoldItem.Click += btnAddSoldItem_Click;
             // 
             // cmbAddSoldItem
             // 
-            this.cmbAddSoldItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
-            this.cmbAddSoldItem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.cmbAddSoldItem.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.cmbAddSoldItem.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.cmbAddSoldItem.DrawDropdownHoverOutline = false;
-            this.cmbAddSoldItem.DrawFocusRectangle = false;
-            this.cmbAddSoldItem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbAddSoldItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAddSoldItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbAddSoldItem.ForeColor = System.Drawing.Color.Gainsboro;
-            this.cmbAddSoldItem.FormattingEnabled = true;
-            this.cmbAddSoldItem.Location = new System.Drawing.Point(6, 254);
-            this.cmbAddSoldItem.Name = "cmbAddSoldItem";
-            this.cmbAddSoldItem.Size = new System.Drawing.Size(246, 21);
-            this.cmbAddSoldItem.TabIndex = 2;
-            this.cmbAddSoldItem.Text = null;
-            this.cmbAddSoldItem.TextPadding = new System.Windows.Forms.Padding(2);
+            cmbAddSoldItem.BackColor = System.Drawing.Color.FromArgb(69, 73, 74);
+            cmbAddSoldItem.BorderColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            cmbAddSoldItem.BorderStyle = ButtonBorderStyle.Solid;
+            cmbAddSoldItem.ButtonColor = System.Drawing.Color.FromArgb(43, 43, 43);
+            cmbAddSoldItem.DrawDropdownHoverOutline = false;
+            cmbAddSoldItem.DrawFocusRectangle = false;
+            cmbAddSoldItem.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbAddSoldItem.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbAddSoldItem.FlatStyle = FlatStyle.Flat;
+            cmbAddSoldItem.ForeColor = System.Drawing.Color.Gainsboro;
+            cmbAddSoldItem.FormattingEnabled = true;
+            cmbAddSoldItem.Location = new System.Drawing.Point(7, 293);
+            cmbAddSoldItem.Margin = new Padding(4, 3, 4, 3);
+            cmbAddSoldItem.Name = "cmbAddSoldItem";
+            cmbAddSoldItem.Size = new Size(286, 24);
+            cmbAddSoldItem.TabIndex = 2;
+            cmbAddSoldItem.Text = null;
+            cmbAddSoldItem.TextPadding = new Padding(2);
             // 
             // lblAddSoldItem
             // 
-            this.lblAddSoldItem.AutoSize = true;
-            this.lblAddSoldItem.Location = new System.Drawing.Point(7, 238);
-            this.lblAddSoldItem.Name = "lblAddSoldItem";
-            this.lblAddSoldItem.Size = new System.Drawing.Size(108, 13);
-            this.lblAddSoldItem.TabIndex = 1;
-            this.lblAddSoldItem.Text = "Add Item To Be Sold:";
+            lblAddSoldItem.AutoSize = true;
+            lblAddSoldItem.Location = new System.Drawing.Point(8, 275);
+            lblAddSoldItem.Margin = new Padding(4, 0, 4, 0);
+            lblAddSoldItem.Name = "lblAddSoldItem";
+            lblAddSoldItem.Size = new Size(116, 15);
+            lblAddSoldItem.TabIndex = 1;
+            lblAddSoldItem.Text = "Add Item To Be Sold:";
             // 
             // lstSoldItems
             // 
-            this.lstSoldItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.lstSoldItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lstSoldItems.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lstSoldItems.FormattingEnabled = true;
-            this.lstSoldItems.Location = new System.Drawing.Point(7, 20);
-            this.lstSoldItems.Name = "lstSoldItems";
-            this.lstSoldItems.Size = new System.Drawing.Size(223, 210);
-            this.lstSoldItems.TabIndex = 0;
+            lstSoldItems.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
+            lstSoldItems.BorderStyle = BorderStyle.FixedSingle;
+            lstSoldItems.ForeColor = System.Drawing.Color.Gainsboro;
+            lstSoldItems.FormattingEnabled = true;
+            lstSoldItems.ItemHeight = 15;
+            lstSoldItems.Location = new System.Drawing.Point(8, 23);
+            lstSoldItems.Margin = new Padding(4, 3, 4, 3);
+            lstSoldItems.Name = "lstSoldItems";
+            lstSoldItems.Size = new Size(260, 242);
+            lstSoldItems.TabIndex = 0;
             // 
             // grpItemsBought
             // 
-            this.grpItemsBought.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.grpItemsBought.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.grpItemsBought.Controls.Add(this.nudBuyAmount);
-            this.grpItemsBought.Controls.Add(this.cmbBuyFor);
-            this.grpItemsBought.Controls.Add(this.lblBuyFor);
-            this.grpItemsBought.Controls.Add(this.lblBuyAmount);
-            this.grpItemsBought.Controls.Add(this.btnDelBoughtItem);
-            this.grpItemsBought.Controls.Add(this.btnAddBoughtItem);
-            this.grpItemsBought.Controls.Add(this.cmbAddBoughtItem);
-            this.grpItemsBought.Controls.Add(this.lblItemBought);
-            this.grpItemsBought.Controls.Add(this.lstBoughtItems);
-            this.grpItemsBought.Controls.Add(this.rdoBuyBlacklist);
-            this.grpItemsBought.Controls.Add(this.rdoBuyWhitelist);
-            this.grpItemsBought.ForeColor = System.Drawing.Color.Gainsboro;
-            this.grpItemsBought.Location = new System.Drawing.Point(264, 112);
-            this.grpItemsBought.Name = "grpItemsBought";
-            this.grpItemsBought.Size = new System.Drawing.Size(258, 390);
-            this.grpItemsBought.TabIndex = 18;
-            this.grpItemsBought.TabStop = false;
-            this.grpItemsBought.Text = "Items Bought (Whitelist - Buy Listed Items)";
+            grpItemsBought.BackColor = System.Drawing.Color.FromArgb(45, 45, 48);
+            grpItemsBought.BorderColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            grpItemsBought.Controls.Add(nudBuyAmount);
+            grpItemsBought.Controls.Add(cmbBuyFor);
+            grpItemsBought.Controls.Add(lblBuyFor);
+            grpItemsBought.Controls.Add(lblBuyAmount);
+            grpItemsBought.Controls.Add(btnDelBoughtItem);
+            grpItemsBought.Controls.Add(btnAddBoughtItem);
+            grpItemsBought.Controls.Add(cmbAddBoughtItem);
+            grpItemsBought.Controls.Add(lblItemBought);
+            grpItemsBought.Controls.Add(lstBoughtItems);
+            grpItemsBought.Controls.Add(rdoBuyBlacklist);
+            grpItemsBought.Controls.Add(rdoBuyWhitelist);
+            grpItemsBought.ForeColor = System.Drawing.Color.Gainsboro;
+            grpItemsBought.Location = new System.Drawing.Point(308, 129);
+            grpItemsBought.Margin = new Padding(4, 3, 4, 3);
+            grpItemsBought.Name = "grpItemsBought";
+            grpItemsBought.Padding = new Padding(4, 3, 4, 3);
+            grpItemsBought.Size = new Size(301, 450);
+            grpItemsBought.TabIndex = 18;
+            grpItemsBought.TabStop = false;
+            grpItemsBought.Text = "Items Bought (Whitelist - Buy Listed Items)";
             // 
             // nudBuyAmount
             // 
-            this.nudBuyAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
-            this.nudBuyAmount.ForeColor = System.Drawing.Color.Gainsboro;
-            this.nudBuyAmount.Location = new System.Drawing.Point(82, 325);
-            this.nudBuyAmount.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.nudBuyAmount.Name = "nudBuyAmount";
-            this.nudBuyAmount.Size = new System.Drawing.Size(171, 20);
-            this.nudBuyAmount.TabIndex = 45;
-            this.nudBuyAmount.Value = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
+            nudBuyAmount.BackColor = System.Drawing.Color.FromArgb(69, 73, 74);
+            nudBuyAmount.ForeColor = System.Drawing.Color.Gainsboro;
+            nudBuyAmount.Location = new System.Drawing.Point(96, 375);
+            nudBuyAmount.Margin = new Padding(4, 3, 4, 3);
+            nudBuyAmount.Maximum = new decimal(new int[] { 1215752191, 23, 0, 0 });
+            nudBuyAmount.Name = "nudBuyAmount";
+            nudBuyAmount.Size = new Size(200, 23);
+            nudBuyAmount.TabIndex = 45;
+            nudBuyAmount.Value = new decimal(new int[] { 0, 0, 0, 0 });
             // 
             // cmbBuyFor
             // 
-            this.cmbBuyFor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
-            this.cmbBuyFor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.cmbBuyFor.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.cmbBuyFor.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.cmbBuyFor.DrawDropdownHoverOutline = false;
-            this.cmbBuyFor.DrawFocusRectangle = false;
-            this.cmbBuyFor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbBuyFor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBuyFor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbBuyFor.ForeColor = System.Drawing.Color.Gainsboro;
-            this.cmbBuyFor.FormattingEnabled = true;
-            this.cmbBuyFor.Location = new System.Drawing.Point(8, 296);
-            this.cmbBuyFor.Name = "cmbBuyFor";
-            this.cmbBuyFor.Size = new System.Drawing.Size(246, 21);
-            this.cmbBuyFor.TabIndex = 12;
-            this.cmbBuyFor.Text = null;
-            this.cmbBuyFor.TextPadding = new System.Windows.Forms.Padding(2);
+            cmbBuyFor.BackColor = System.Drawing.Color.FromArgb(69, 73, 74);
+            cmbBuyFor.BorderColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            cmbBuyFor.BorderStyle = ButtonBorderStyle.Solid;
+            cmbBuyFor.ButtonColor = System.Drawing.Color.FromArgb(43, 43, 43);
+            cmbBuyFor.DrawDropdownHoverOutline = false;
+            cmbBuyFor.DrawFocusRectangle = false;
+            cmbBuyFor.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbBuyFor.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBuyFor.FlatStyle = FlatStyle.Flat;
+            cmbBuyFor.ForeColor = System.Drawing.Color.Gainsboro;
+            cmbBuyFor.FormattingEnabled = true;
+            cmbBuyFor.Location = new System.Drawing.Point(9, 342);
+            cmbBuyFor.Margin = new Padding(4, 3, 4, 3);
+            cmbBuyFor.Name = "cmbBuyFor";
+            cmbBuyFor.Size = new Size(286, 24);
+            cmbBuyFor.TabIndex = 12;
+            cmbBuyFor.Text = null;
+            cmbBuyFor.TextPadding = new Padding(2);
             // 
             // lblBuyFor
             // 
-            this.lblBuyFor.AutoSize = true;
-            this.lblBuyFor.Location = new System.Drawing.Point(6, 280);
-            this.lblBuyFor.Name = "lblBuyFor";
-            this.lblBuyFor.Size = new System.Drawing.Size(46, 13);
-            this.lblBuyFor.TabIndex = 11;
-            this.lblBuyFor.Text = "Buy For:";
+            lblBuyFor.AutoSize = true;
+            lblBuyFor.Location = new System.Drawing.Point(7, 323);
+            lblBuyFor.Margin = new Padding(4, 0, 4, 0);
+            lblBuyFor.Name = "lblBuyFor";
+            lblBuyFor.Size = new Size(50, 15);
+            lblBuyFor.TabIndex = 11;
+            lblBuyFor.Text = "Buy For:";
             // 
             // lblBuyAmount
             // 
-            this.lblBuyAmount.AutoSize = true;
-            this.lblBuyAmount.Location = new System.Drawing.Point(6, 327);
-            this.lblBuyAmount.Name = "lblBuyAmount";
-            this.lblBuyAmount.Size = new System.Drawing.Size(66, 13);
-            this.lblBuyAmount.TabIndex = 6;
-            this.lblBuyAmount.Text = "Sell Amount:";
+            lblBuyAmount.AutoSize = true;
+            lblBuyAmount.Location = new System.Drawing.Point(7, 377);
+            lblBuyAmount.Margin = new Padding(4, 0, 4, 0);
+            lblBuyAmount.Name = "lblBuyAmount";
+            lblBuyAmount.Size = new Size(75, 15);
+            lblBuyAmount.TabIndex = 6;
+            lblBuyAmount.Text = "Sell Amount:";
             // 
             // btnDelBoughtItem
             // 
-            this.btnDelBoughtItem.Location = new System.Drawing.Point(138, 357);
-            this.btnDelBoughtItem.Name = "btnDelBoughtItem";
-            this.btnDelBoughtItem.Padding = new System.Windows.Forms.Padding(5);
-            this.btnDelBoughtItem.Size = new System.Drawing.Size(117, 23);
-            this.btnDelBoughtItem.TabIndex = 6;
-            this.btnDelBoughtItem.Text = "Remove Selected";
-            this.btnDelBoughtItem.Click += new System.EventHandler(this.btnDelBoughtItem_Click);
+            btnDelBoughtItem.Location = new System.Drawing.Point(161, 412);
+            btnDelBoughtItem.Margin = new Padding(4, 3, 4, 3);
+            btnDelBoughtItem.Name = "btnDelBoughtItem";
+            btnDelBoughtItem.Padding = new Padding(6, 6, 6, 6);
+            btnDelBoughtItem.Size = new Size(136, 27);
+            btnDelBoughtItem.TabIndex = 6;
+            btnDelBoughtItem.Text = "Remove Selected";
+            btnDelBoughtItem.Click += btnDelBoughtItem_Click;
             // 
             // btnAddBoughtItem
             // 
-            this.btnAddBoughtItem.Location = new System.Drawing.Point(9, 357);
-            this.btnAddBoughtItem.Name = "btnAddBoughtItem";
-            this.btnAddBoughtItem.Padding = new System.Windows.Forms.Padding(5);
-            this.btnAddBoughtItem.Size = new System.Drawing.Size(117, 23);
-            this.btnAddBoughtItem.TabIndex = 5;
-            this.btnAddBoughtItem.Text = "Add Selected";
-            this.btnAddBoughtItem.Click += new System.EventHandler(this.btnAddBoughtItem_Click);
+            btnAddBoughtItem.Location = new System.Drawing.Point(10, 412);
+            btnAddBoughtItem.Margin = new Padding(4, 3, 4, 3);
+            btnAddBoughtItem.Name = "btnAddBoughtItem";
+            btnAddBoughtItem.Padding = new Padding(6, 6, 6, 6);
+            btnAddBoughtItem.Size = new Size(136, 27);
+            btnAddBoughtItem.TabIndex = 5;
+            btnAddBoughtItem.Text = "Add Selected";
+            btnAddBoughtItem.Click += btnAddBoughtItem_Click;
             // 
             // cmbAddBoughtItem
             // 
-            this.cmbAddBoughtItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
-            this.cmbAddBoughtItem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.cmbAddBoughtItem.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.cmbAddBoughtItem.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.cmbAddBoughtItem.DrawDropdownHoverOutline = false;
-            this.cmbAddBoughtItem.DrawFocusRectangle = false;
-            this.cmbAddBoughtItem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbAddBoughtItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAddBoughtItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbAddBoughtItem.ForeColor = System.Drawing.Color.Gainsboro;
-            this.cmbAddBoughtItem.FormattingEnabled = true;
-            this.cmbAddBoughtItem.Location = new System.Drawing.Point(8, 254);
-            this.cmbAddBoughtItem.Name = "cmbAddBoughtItem";
-            this.cmbAddBoughtItem.Size = new System.Drawing.Size(246, 21);
-            this.cmbAddBoughtItem.TabIndex = 3;
-            this.cmbAddBoughtItem.Text = null;
-            this.cmbAddBoughtItem.TextPadding = new System.Windows.Forms.Padding(2);
+            cmbAddBoughtItem.BackColor = System.Drawing.Color.FromArgb(69, 73, 74);
+            cmbAddBoughtItem.BorderColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            cmbAddBoughtItem.BorderStyle = ButtonBorderStyle.Solid;
+            cmbAddBoughtItem.ButtonColor = System.Drawing.Color.FromArgb(43, 43, 43);
+            cmbAddBoughtItem.DrawDropdownHoverOutline = false;
+            cmbAddBoughtItem.DrawFocusRectangle = false;
+            cmbAddBoughtItem.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbAddBoughtItem.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbAddBoughtItem.FlatStyle = FlatStyle.Flat;
+            cmbAddBoughtItem.ForeColor = System.Drawing.Color.Gainsboro;
+            cmbAddBoughtItem.FormattingEnabled = true;
+            cmbAddBoughtItem.Location = new System.Drawing.Point(9, 293);
+            cmbAddBoughtItem.Margin = new Padding(4, 3, 4, 3);
+            cmbAddBoughtItem.Name = "cmbAddBoughtItem";
+            cmbAddBoughtItem.Size = new Size(286, 24);
+            cmbAddBoughtItem.TabIndex = 3;
+            cmbAddBoughtItem.Text = null;
+            cmbAddBoughtItem.TextPadding = new Padding(2);
             // 
             // lblItemBought
             // 
-            this.lblItemBought.AutoSize = true;
-            this.lblItemBought.Location = new System.Drawing.Point(6, 240);
-            this.lblItemBought.Name = "lblItemBought";
-            this.lblItemBought.Size = new System.Drawing.Size(52, 13);
-            this.lblItemBought.TabIndex = 2;
-            this.lblItemBought.Text = "Add Item:";
+            lblItemBought.AutoSize = true;
+            lblItemBought.Location = new System.Drawing.Point(7, 277);
+            lblItemBought.Margin = new Padding(4, 0, 4, 0);
+            lblItemBought.Name = "lblItemBought";
+            lblItemBought.Size = new Size(59, 15);
+            lblItemBought.TabIndex = 2;
+            lblItemBought.Text = "Add Item:";
             // 
             // lstBoughtItems
             // 
-            this.lstBoughtItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.lstBoughtItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lstBoughtItems.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lstBoughtItems.FormattingEnabled = true;
-            this.lstBoughtItems.Location = new System.Drawing.Point(8, 20);
-            this.lstBoughtItems.Name = "lstBoughtItems";
-            this.lstBoughtItems.Size = new System.Drawing.Size(245, 210);
-            this.lstBoughtItems.TabIndex = 2;
+            lstBoughtItems.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
+            lstBoughtItems.BorderStyle = BorderStyle.FixedSingle;
+            lstBoughtItems.ForeColor = System.Drawing.Color.Gainsboro;
+            lstBoughtItems.FormattingEnabled = true;
+            lstBoughtItems.ItemHeight = 15;
+            lstBoughtItems.Location = new System.Drawing.Point(9, 23);
+            lstBoughtItems.Margin = new Padding(4, 3, 4, 3);
+            lstBoughtItems.Name = "lstBoughtItems";
+            lstBoughtItems.Size = new Size(286, 242);
+            lstBoughtItems.TabIndex = 2;
             // 
             // rdoBuyBlacklist
             // 
-            this.rdoBuyBlacklist.AutoSize = true;
-            this.rdoBuyBlacklist.Location = new System.Drawing.Point(189, 236);
-            this.rdoBuyBlacklist.Name = "rdoBuyBlacklist";
-            this.rdoBuyBlacklist.Size = new System.Drawing.Size(64, 17);
-            this.rdoBuyBlacklist.TabIndex = 1;
-            this.rdoBuyBlacklist.Text = "Blacklist";
-            this.rdoBuyBlacklist.CheckedChanged += new System.EventHandler(this.rdoBuyBlacklist_CheckedChanged);
+            rdoBuyBlacklist.AutoSize = true;
+            rdoBuyBlacklist.Location = new System.Drawing.Point(220, 272);
+            rdoBuyBlacklist.Margin = new Padding(4, 3, 4, 3);
+            rdoBuyBlacklist.Name = "rdoBuyBlacklist";
+            rdoBuyBlacklist.Size = new Size(68, 19);
+            rdoBuyBlacklist.TabIndex = 1;
+            rdoBuyBlacklist.Text = "Blacklist";
+            rdoBuyBlacklist.CheckedChanged += rdoBuyBlacklist_CheckedChanged;
             // 
             // rdoBuyWhitelist
             // 
-            this.rdoBuyWhitelist.AutoSize = true;
-            this.rdoBuyWhitelist.Checked = true;
-            this.rdoBuyWhitelist.Location = new System.Drawing.Point(118, 236);
-            this.rdoBuyWhitelist.Name = "rdoBuyWhitelist";
-            this.rdoBuyWhitelist.Size = new System.Drawing.Size(65, 17);
-            this.rdoBuyWhitelist.TabIndex = 0;
-            this.rdoBuyWhitelist.TabStop = true;
-            this.rdoBuyWhitelist.Text = "Whitelist";
-            this.rdoBuyWhitelist.CheckedChanged += new System.EventHandler(this.rdoBuyWhitelist_CheckedChanged);
+            rdoBuyWhitelist.AutoSize = true;
+            rdoBuyWhitelist.Checked = true;
+            rdoBuyWhitelist.Location = new System.Drawing.Point(138, 272);
+            rdoBuyWhitelist.Margin = new Padding(4, 3, 4, 3);
+            rdoBuyWhitelist.Name = "rdoBuyWhitelist";
+            rdoBuyWhitelist.Size = new Size(71, 19);
+            rdoBuyWhitelist.TabIndex = 0;
+            rdoBuyWhitelist.TabStop = true;
+            rdoBuyWhitelist.Text = "Whitelist";
+            rdoBuyWhitelist.CheckedChanged += rdoBuyWhitelist_CheckedChanged;
             // 
             // pnlContainer
             // 
-            this.pnlContainer.Controls.Add(this.grpItemsBought);
-            this.pnlContainer.Controls.Add(this.grpGeneral);
-            this.pnlContainer.Controls.Add(this.grpItemsSold);
-            this.pnlContainer.Location = new System.Drawing.Point(222, 34);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(522, 502);
-            this.pnlContainer.TabIndex = 19;
-            this.pnlContainer.Visible = false;
+            pnlContainer.Controls.Add(grpItemsBought);
+            pnlContainer.Controls.Add(grpGeneral);
+            pnlContainer.Controls.Add(grpItemsSold);
+            pnlContainer.Location = new System.Drawing.Point(259, 39);
+            pnlContainer.Margin = new Padding(4, 3, 4, 3);
+            pnlContainer.Name = "pnlContainer";
+            pnlContainer.Size = new Size(609, 579);
+            pnlContainer.TabIndex = 19;
+            pnlContainer.Visible = false;
             // 
             // btnCancel
             // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(553, 542);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Padding = new System.Windows.Forms.Padding(5);
-            this.btnCancel.Size = new System.Drawing.Size(190, 27);
-            this.btnCancel.TabIndex = 49;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.DialogResult = DialogResult.Cancel;
+            btnCancel.Location = new System.Drawing.Point(645, 625);
+            btnCancel.Margin = new Padding(4, 3, 4, 3);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Padding = new Padding(6, 6, 6, 6);
+            btnCancel.Size = new Size(222, 31);
+            btnCancel.TabIndex = 49;
+            btnCancel.Text = "Cancel";
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(357, 542);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Padding = new System.Windows.Forms.Padding(5);
-            this.btnSave.Size = new System.Drawing.Size(190, 27);
-            this.btnSave.TabIndex = 46;
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            btnSave.Location = new System.Drawing.Point(416, 625);
+            btnSave.Margin = new Padding(4, 3, 4, 3);
+            btnSave.Name = "btnSave";
+            btnSave.Padding = new Padding(6, 6, 6, 6);
+            btnSave.Size = new Size(222, 31);
+            btnSave.TabIndex = 46;
+            btnSave.Text = "Save";
+            btnSave.Click += btnSave_Click;
             // 
             // toolStrip
             // 
-            this.toolStrip.AutoSize = false;
-            this.toolStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.toolStrip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripItemNew,
-            this.toolStripSeparator1,
-            this.toolStripItemDelete,
-            this.toolStripSeparator2,
-            this.btnAlphabetical,
-            this.toolStripSeparator4,
-            this.toolStripItemCopy,
-            this.toolStripItemPaste,
-            this.toolStripSeparator3,
-            this.toolStripItemUndo});
-            this.toolStrip.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Padding = new System.Windows.Forms.Padding(5, 0, 1, 0);
-            this.toolStrip.Size = new System.Drawing.Size(751, 25);
-            this.toolStrip.TabIndex = 50;
-            this.toolStrip.Text = "toolStrip1";
+            toolStrip.AutoSize = false;
+            toolStrip.BackColor = System.Drawing.Color.FromArgb(45, 45, 48);
+            toolStrip.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            toolStrip.Items.AddRange(new ToolStripItem[] { toolStripItemNew, toolStripSeparator1, toolStripItemDelete, toolStripSeparator2, btnAlphabetical, toolStripSeparator4, toolStripItemCopy, toolStripItemPaste, toolStripSeparator3, toolStripItemUndo });
+            toolStrip.Location = new System.Drawing.Point(0, 0);
+            toolStrip.Name = "toolStrip";
+            toolStrip.Padding = new Padding(6, 0, 1, 0);
+            toolStrip.Size = new Size(876, 29);
+            toolStrip.TabIndex = 50;
+            toolStrip.Text = "toolStrip1";
             // 
             // toolStripItemNew
             // 
-            this.toolStripItemNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripItemNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.toolStripItemNew.Image = ((System.Drawing.Image)(resources.GetObject("toolStripItemNew.Image")));
-            this.toolStripItemNew.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripItemNew.Name = "toolStripItemNew";
-            this.toolStripItemNew.Size = new System.Drawing.Size(23, 22);
-            this.toolStripItemNew.Text = "New";
-            this.toolStripItemNew.Click += new System.EventHandler(this.toolStripItemNew_Click);
+            toolStripItemNew.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripItemNew.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            toolStripItemNew.Image = (Image)resources.GetObject("toolStripItemNew.Image");
+            toolStripItemNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+            toolStripItemNew.Name = "toolStripItemNew";
+            toolStripItemNew.Size = new Size(23, 26);
+            toolStripItemNew.Text = "New";
+            toolStripItemNew.Click += toolStripItemNew_Click;
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.toolStripSeparator1.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator1.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            toolStripSeparator1.Margin = new Padding(0, 0, 2, 0);
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 29);
             // 
             // toolStripItemDelete
             // 
-            this.toolStripItemDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripItemDelete.Enabled = false;
-            this.toolStripItemDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.toolStripItemDelete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripItemDelete.Image")));
-            this.toolStripItemDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripItemDelete.Name = "toolStripItemDelete";
-            this.toolStripItemDelete.Size = new System.Drawing.Size(23, 22);
-            this.toolStripItemDelete.Text = "Delete";
-            this.toolStripItemDelete.Click += new System.EventHandler(this.toolStripItemDelete_Click);
+            toolStripItemDelete.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripItemDelete.Enabled = false;
+            toolStripItemDelete.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            toolStripItemDelete.Image = (Image)resources.GetObject("toolStripItemDelete.Image");
+            toolStripItemDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            toolStripItemDelete.Name = "toolStripItemDelete";
+            toolStripItemDelete.Size = new Size(23, 26);
+            toolStripItemDelete.Text = "Delete";
+            toolStripItemDelete.Click += toolStripItemDelete_Click;
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.toolStripSeparator2.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator2.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            toolStripSeparator2.Margin = new Padding(0, 0, 2, 0);
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 29);
             // 
             // btnAlphabetical
             // 
-            this.btnAlphabetical.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnAlphabetical.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.btnAlphabetical.Image = ((System.Drawing.Image)(resources.GetObject("btnAlphabetical.Image")));
-            this.btnAlphabetical.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAlphabetical.Name = "btnAlphabetical";
-            this.btnAlphabetical.Size = new System.Drawing.Size(23, 22);
-            this.btnAlphabetical.Text = "Order Chronologically";
-            this.btnAlphabetical.Click += new System.EventHandler(this.btnAlphabetical_Click);
+            btnAlphabetical.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnAlphabetical.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            btnAlphabetical.Image = (Image)resources.GetObject("btnAlphabetical.Image");
+            btnAlphabetical.ImageTransparentColor = System.Drawing.Color.Magenta;
+            btnAlphabetical.Name = "btnAlphabetical";
+            btnAlphabetical.Size = new Size(23, 26);
+            btnAlphabetical.Text = "Order Chronologically";
+            btnAlphabetical.Click += btnAlphabetical_Click;
             // 
             // toolStripSeparator4
             // 
-            this.toolStripSeparator4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.toolStripSeparator4.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator4.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            toolStripSeparator4.Margin = new Padding(0, 0, 2, 0);
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size(6, 29);
             // 
             // toolStripItemCopy
             // 
-            this.toolStripItemCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripItemCopy.Enabled = false;
-            this.toolStripItemCopy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.toolStripItemCopy.Image = ((System.Drawing.Image)(resources.GetObject("toolStripItemCopy.Image")));
-            this.toolStripItemCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripItemCopy.Name = "toolStripItemCopy";
-            this.toolStripItemCopy.Size = new System.Drawing.Size(23, 22);
-            this.toolStripItemCopy.Text = "Copy";
-            this.toolStripItemCopy.Click += new System.EventHandler(this.toolStripItemCopy_Click);
+            toolStripItemCopy.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripItemCopy.Enabled = false;
+            toolStripItemCopy.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            toolStripItemCopy.Image = (Image)resources.GetObject("toolStripItemCopy.Image");
+            toolStripItemCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
+            toolStripItemCopy.Name = "toolStripItemCopy";
+            toolStripItemCopy.Size = new Size(23, 26);
+            toolStripItemCopy.Text = "Copy";
+            toolStripItemCopy.Click += toolStripItemCopy_Click;
             // 
             // toolStripItemPaste
             // 
-            this.toolStripItemPaste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripItemPaste.Enabled = false;
-            this.toolStripItemPaste.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.toolStripItemPaste.Image = ((System.Drawing.Image)(resources.GetObject("toolStripItemPaste.Image")));
-            this.toolStripItemPaste.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripItemPaste.Name = "toolStripItemPaste";
-            this.toolStripItemPaste.Size = new System.Drawing.Size(23, 22);
-            this.toolStripItemPaste.Text = "Paste";
-            this.toolStripItemPaste.Click += new System.EventHandler(this.toolStripItemPaste_Click);
+            toolStripItemPaste.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripItemPaste.Enabled = false;
+            toolStripItemPaste.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            toolStripItemPaste.Image = (Image)resources.GetObject("toolStripItemPaste.Image");
+            toolStripItemPaste.ImageTransparentColor = System.Drawing.Color.Magenta;
+            toolStripItemPaste.Name = "toolStripItemPaste";
+            toolStripItemPaste.Size = new Size(23, 26);
+            toolStripItemPaste.Text = "Paste";
+            toolStripItemPaste.Click += toolStripItemPaste_Click;
             // 
             // toolStripSeparator3
             // 
-            this.toolStripSeparator3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.toolStripSeparator3.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator3.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            toolStripSeparator3.Margin = new Padding(0, 0, 2, 0);
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 29);
             // 
             // toolStripItemUndo
             // 
-            this.toolStripItemUndo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripItemUndo.Enabled = false;
-            this.toolStripItemUndo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.toolStripItemUndo.Image = ((System.Drawing.Image)(resources.GetObject("toolStripItemUndo.Image")));
-            this.toolStripItemUndo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripItemUndo.Name = "toolStripItemUndo";
-            this.toolStripItemUndo.Size = new System.Drawing.Size(23, 22);
-            this.toolStripItemUndo.Text = "Undo";
-            this.toolStripItemUndo.Click += new System.EventHandler(this.toolStripItemUndo_Click);
+            toolStripItemUndo.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripItemUndo.Enabled = false;
+            toolStripItemUndo.ForeColor = System.Drawing.Color.FromArgb(220, 220, 220);
+            toolStripItemUndo.Image = (Image)resources.GetObject("toolStripItemUndo.Image");
+            toolStripItemUndo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            toolStripItemUndo.Name = "toolStripItemUndo";
+            toolStripItemUndo.Size = new Size(23, 26);
+            toolStripItemUndo.Text = "Undo";
+            toolStripItemUndo.Click += toolStripItemUndo_Click;
             // 
             // FrmShop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(751, 583);
-            this.ControlBox = false;
-            this.Controls.Add(this.toolStrip);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.grpShops);
-            this.Controls.Add(this.pnlContainer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.KeyPreview = true;
-            this.Name = "FrmShop";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Shop Editor";
-            this.Load += new System.EventHandler(this.frmShop_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.form_KeyDown);
-            this.grpShops.ResumeLayout(false);
-            this.grpShops.PerformLayout();
-            this.grpGeneral.ResumeLayout(false);
-            this.grpGeneral.PerformLayout();
-            this.grpItemsSold.ResumeLayout(false);
-            this.grpItemsSold.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSellCost)).EndInit();
-            this.grpItemsBought.ResumeLayout(false);
-            this.grpItemsBought.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBuyAmount)).EndInit();
-            this.pnlContainer.ResumeLayout(false);
-            this.toolStrip.ResumeLayout(false);
-            this.toolStrip.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            BackColor = System.Drawing.Color.FromArgb(45, 45, 48);
+            ClientSize = new Size(876, 673);
+            ControlBox = false;
+            Controls.Add(toolStrip);
+            Controls.Add(btnCancel);
+            Controls.Add(btnSave);
+            Controls.Add(grpShops);
+            Controls.Add(pnlContainer);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            KeyPreview = true;
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "FrmShop";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Shop Editor";
+            Load += frmShop_Load;
+            KeyDown += form_KeyDown;
+            grpShops.ResumeLayout(false);
+            grpShops.PerformLayout();
+            grpGeneral.ResumeLayout(false);
+            grpGeneral.PerformLayout();
+            grpItemsSold.ResumeLayout(false);
+            grpItemsSold.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudSellCost).EndInit();
+            grpItemsBought.ResumeLayout(false);
+            grpItemsBought.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudBuyAmount).EndInit();
+            pnlContainer.ResumeLayout(false);
+            toolStrip.ResumeLayout(false);
+            toolStrip.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
