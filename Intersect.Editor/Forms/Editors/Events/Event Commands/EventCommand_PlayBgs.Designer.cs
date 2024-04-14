@@ -30,87 +30,100 @@ namespace Intersect.Editor.Forms.Editors.Events.Event_Commands
         /// </summary>
         private void InitializeComponent()
         {
-            this.grpPlayBGS = new DarkUI.Controls.DarkGroupBox();
-            this.cmbSound = new DarkUI.Controls.DarkComboBox();
-            this.lblSound = new System.Windows.Forms.Label();
-            this.btnCancel = new DarkUI.Controls.DarkButton();
-            this.btnSave = new DarkUI.Controls.DarkButton();
-            this.grpPlayBGS.SuspendLayout();
-            this.SuspendLayout();
+            grpPlayBGS = new DarkGroupBox();
+            cmbSound = new DarkComboBox();
+            lblSound = new Label();
+            btnCancel = new DarkButton();
+            btnSave = new DarkButton();
+            grpPlayBGS.SuspendLayout();
+            SuspendLayout();
             // 
             // grpPlayBGS
             // 
-            this.grpPlayBGS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.grpPlayBGS.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.grpPlayBGS.Controls.Add(this.cmbSound);
-            this.grpPlayBGS.Controls.Add(this.lblSound);
-            this.grpPlayBGS.Controls.Add(this.btnCancel);
-            this.grpPlayBGS.Controls.Add(this.btnSave);
-            this.grpPlayBGS.ForeColor = System.Drawing.Color.Gainsboro;
-            this.grpPlayBGS.Location = new System.Drawing.Point(3, 3);
-            this.grpPlayBGS.Name = "grpPlayBGS";
-            this.grpPlayBGS.Size = new System.Drawing.Size(176, 126);
-            this.grpPlayBGS.TabIndex = 17;
-            this.grpPlayBGS.TabStop = false;
-            this.grpPlayBGS.Text = "Play Sound";
+            grpPlayBGS.BackColor = System.Drawing.Color.FromArgb(60, 63, 65);
+            grpPlayBGS.BorderColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            grpPlayBGS.Controls.Add(cmbSound);
+            grpPlayBGS.Controls.Add(lblSound);
+            grpPlayBGS.Controls.Add(btnCancel);
+            grpPlayBGS.Controls.Add(btnSave);
+            grpPlayBGS.ForeColor = System.Drawing.Color.Gainsboro;
+            grpPlayBGS.Location = new System.Drawing.Point(4, 3);
+            grpPlayBGS.Margin = new Padding(4, 3, 4, 3);
+            grpPlayBGS.Name = "grpPlayBGS";
+            grpPlayBGS.Padding = new Padding(4, 3, 4, 3);
+            grpPlayBGS.Size = new Size(403, 145);
+            grpPlayBGS.TabIndex = 17;
+            grpPlayBGS.TabStop = false;
+            grpPlayBGS.Text = "Play Sound";
             // 
             // cmbSound
             // 
-            this.cmbSound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
-            this.cmbSound.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.cmbSound.BorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.cmbSound.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbSound.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSound.FormattingEnabled = true;
-            this.cmbSound.Location = new System.Drawing.Point(47, 19);
-            this.cmbSound.Name = "cmbSound";
-            this.cmbSound.Size = new System.Drawing.Size(117, 21);
-            this.cmbSound.TabIndex = 22;
-            this.cmbSound.SelectedIndexChanged += new System.EventHandler(this.cmbSprite_SelectedIndexChanged);
+            cmbSound.BackColor = System.Drawing.Color.FromArgb(69, 73, 74);
+            cmbSound.BorderColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            cmbSound.BorderStyle = ButtonBorderStyle.Solid;
+            cmbSound.ButtonColor = System.Drawing.Color.FromArgb(43, 43, 43);
+            cmbSound.Dock = DockStyle.Top;
+            cmbSound.DrawDropdownHoverOutline = false;
+            cmbSound.DrawFocusRectangle = false;
+            cmbSound.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbSound.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSound.FlatStyle = FlatStyle.Flat;
+            cmbSound.ForeColor = System.Drawing.Color.Gainsboro;
+            cmbSound.FormattingEnabled = true;
+            cmbSound.Location = new System.Drawing.Point(4, 19);
+            cmbSound.Margin = new Padding(4, 3, 4, 3);
+            cmbSound.Name = "cmbSound";
+            cmbSound.Size = new Size(395, 24);
+            cmbSound.TabIndex = 22;
+            cmbSound.Text = null;
+            cmbSound.TextPadding = new Padding(2);
+            cmbSound.SelectedIndexChanged += cmbSprite_SelectedIndexChanged;
             // 
             // lblSound
             // 
-            this.lblSound.AutoSize = true;
-            this.lblSound.Location = new System.Drawing.Point(4, 22);
-            this.lblSound.Name = "lblSound";
-            this.lblSound.Size = new System.Drawing.Size(41, 13);
-            this.lblSound.TabIndex = 21;
-            this.lblSound.Text = "Sound:";
+            lblSound.AutoSize = true;
+            lblSound.Location = new System.Drawing.Point(148, 56);
+            lblSound.Margin = new Padding(4, 0, 4, 0);
+            lblSound.Name = "lblSound";
+            lblSound.Size = new Size(44, 15);
+            lblSound.TabIndex = 21;
+            lblSound.Text = "Sound:";
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(89, 97);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Padding = new System.Windows.Forms.Padding(5);
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 20;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.Location = new System.Drawing.Point(104, 112);
+            btnCancel.Margin = new Padding(4, 3, 4, 3);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Padding = new Padding(6, 6, 6, 6);
+            btnCancel.Size = new Size(88, 27);
+            btnCancel.TabIndex = 20;
+            btnCancel.Text = "Cancel";
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(7, 97);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Padding = new System.Windows.Forms.Padding(5);
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 19;
-            this.btnSave.Text = "Ok";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            btnSave.Location = new System.Drawing.Point(8, 112);
+            btnSave.Margin = new Padding(4, 3, 4, 3);
+            btnSave.Name = "btnSave";
+            btnSave.Padding = new Padding(6, 6, 6, 6);
+            btnSave.Size = new Size(88, 27);
+            btnSave.TabIndex = 19;
+            btnSave.Text = "Ok";
+            btnSave.Click += btnSave_Click;
             // 
-            // EventCommand_PlayBgs
+            // EventCommandPlayBgs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.Controls.Add(this.grpPlayBGS);
-            this.Name = "EventCommandPlayBgs";
-            this.Size = new System.Drawing.Size(182, 132);
-            this.grpPlayBGS.ResumeLayout(false);
-            this.grpPlayBGS.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            BackColor = System.Drawing.Color.FromArgb(45, 45, 48);
+            Controls.Add(grpPlayBGS);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "EventCommandPlayBgs";
+            Size = new Size(413, 159);
+            grpPlayBGS.ResumeLayout(false);
+            grpPlayBGS.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
