@@ -161,7 +161,7 @@ namespace Intersect.Client.Entities.Projectiles
                             var s = new ProjectileSpawns(
                                 FindProjectileRotationDir(Dir, (Direction)d),
                                 (byte)(X + FindProjectileRotationX(Dir, x - 2, y - 2)),
-                                (byte)(Y + FindProjectileRotationY(Dir, x - 2, y - 2)), Z, MapId, animBase,
+                                (byte)(Y + FindProjectileRotationY(Dir, x - 2, y - 2)), Z, MapId, animBase,  //Here
                                 mMyBase.Animations[spawn].AutoRotate, mMyBase, this
                             );
 
@@ -317,7 +317,7 @@ namespace Intersect.Client.Entities.Projectiles
                                     Maps.MapInstance.Get(Spawns[s].SpawnMapId).GetY() +
                                     Spawns[s].SpawnY * Options.TileHeight +
                                     Spawns[s].OffsetY +
-                                    Options.TileHeight / 2, X, Y, MapId,
+                                    Options.TileHeight / 2 - 48, X, Y, MapId, //Here
                                     Spawns[s].AutoRotate ? Spawns[s].Dir : Direction.Up,
                                     Spawns[s].Z
                                 );
