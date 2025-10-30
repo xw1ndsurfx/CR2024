@@ -111,7 +111,7 @@ namespace Intersect.Client.Core
 
         public static GameFont UIFont;
 
-        public static float BaseWorldScale => Options.Instance?.MapOpts?.TileScale ?? 1;
+        public static float BaseWorldScale => Options.Instance?.MapOpts?.TileScale ?? 2;
 
         //Init Functions
         public static void InitGraphics()

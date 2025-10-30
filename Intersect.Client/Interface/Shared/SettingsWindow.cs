@@ -325,9 +325,9 @@ namespace Intersect.Client.Interface.Shared
                 }
             );
 
-            Globals.Database.WorldZoom = MathHelper.Clamp(Globals.Database.WorldZoom, 1, 4);
+            Globals.Database.WorldZoom = MathHelper.Clamp(Globals.Database.WorldZoom, 2, 4);
 
-            var worldScaleNotches = new double[] { 1, 2, 4 }.Select(n => n * Graphics.BaseWorldScale).ToArray();
+            var worldScaleNotches = new double[] { 2, 3, 4 }.Select(n => n * Graphics.BaseWorldScale).ToArray();
             _worldScale = new LabeledHorizontalSlider(mVideoSettingsContainer, "WorldScale")
             {
                 Label = Strings.Settings.WorldScale,
