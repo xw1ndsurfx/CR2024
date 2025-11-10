@@ -181,6 +181,7 @@ namespace Intersect.Client.Interface.Game
 
             // --- HUD Quête ---
             mQuestTaskHudLabel.ClearText();
+
             if (mSelectedQuest != null && Globals.Me.QuestProgress.ContainsKey(mSelectedQuest.Id))
             {
                 var playerQuest = Globals.Me.QuestProgress[mSelectedQuest.Id];
@@ -188,10 +189,15 @@ namespace Intersect.Client.Interface.Game
 
                 if (currentTask != null)
                 {
+                    // --- Texte principal en blanc ---
+                    mQuestTaskHudTemplate.TextColor = Color.White;
                     var wrappedText = WrapText(currentTask.Description, 40);
                     mQuestTaskHudLabel.AddText(wrappedText, mQuestTaskHudTemplate);
 
-                    // --- Affiche le nombre de monstres tués si c'est une tâche de type KillNpcs ---
+                    // --- Progression en vert ---
+                    mQuestTaskHudTemplate.TextColor = Color.ForestGreen; // Vert vif (tu peux aussi mettre Color.Green pour un vert plus foncé)
+
+                    // --- KillNpcs ---
                     if (currentTask.Objective == QuestObjective.KillNpcs)
                     {
                         var progressText = $"{Globals.Me.QuestProgress[mSelectedQuest.Id].TaskProgress} / {currentTask.Quantity} {NpcBase.GetName(currentTask.TargetId)}";
@@ -199,15 +205,19 @@ namespace Intersect.Client.Interface.Game
                         mQuestTaskHudLabel.AddText(progressText, mQuestTaskHudTemplate);
                     }
 
-                    // --- Idem pour GatherItems si tu veux le nombre d’objets ---
+                    // --- GatherItems ---
                     if (currentTask.Objective == QuestObjective.GatherItems)
                     {
                         var progressText = $"{Globals.Me.QuestProgress[mSelectedQuest.Id].TaskProgress} / {currentTask.Quantity} {ItemBase.GetName(currentTask.TargetId)}";
                         mQuestTaskHudLabel.AddLineBreak();
                         mQuestTaskHudLabel.AddText(progressText, mQuestTaskHudTemplate);
                     }
+
+                    // --- Remet la couleur du template à blanc pour la suite ---
+                    mQuestTaskHudTemplate.TextColor = Color.White;
                 }
             }
+
             // --- Fin HUD ---
 
             if (mQuestsWindow.IsHidden)
