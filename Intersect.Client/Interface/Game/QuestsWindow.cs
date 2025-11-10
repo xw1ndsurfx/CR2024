@@ -41,6 +41,9 @@ namespace Intersect.Client.Interface.Game
 
         private QuestBase mSelectedQuest;
 
+        private RichLabel mQuestTaskHudLabel;
+        private Label mQuestTaskHudTemplate;
+
         //Init
         public QuestsWindow(Canvas gameCanvas)
         {
@@ -71,6 +74,43 @@ namespace Intersect.Client.Interface.Game
             mQuitButton.Clicked += _quitButton_Clicked;
 
             mQuestsWindow.LoadJsonUi(GameContentManager.UI.InGame, Graphics.Renderer.GetResolutionString());
+
+            // === HUD Quête ===
+            mQuestTaskHudLabel = new RichLabel(gameCanvas)
+            {
+                Width = 300,
+                Height = 300
+            };
+
+            mQuestTaskHudTemplate = new Label(gameCanvas)
+            {
+                Font = GameContentManager.Current.GetFont("sourcesanspro", 14),
+                TextColor = Color.White
+            };
+
+            mQuestTaskHudLabel.SetBounds(gameCanvas.Width - 320, 20, 300, 300);
+            gameCanvas.AddChild(mQuestTaskHudLabel);
+
+        }
+
+        private string WrapText(string text, int maxLineLength)
+        {
+            var words = text.Split(' ');
+            var line = "";
+            var result = "";
+
+            foreach (var word in words)
+            {
+                if ((line + word).Length > maxLineLength)
+                {
+                    result += line.TrimEnd() + "\n";
+                    line = "";
+                }
+                line += word + " ";
+            }
+
+            result += line.TrimEnd();
+            return result;
         }
 
         private void _quitButton_Clicked(Base sender, ClickedEventArgs arguments)
@@ -104,6 +144,21 @@ namespace Intersect.Client.Interface.Game
                 UpdateQuestList();
                 UpdateSelectedQuest();
             }
+
+            // --- HUD Quête ---
+            mQuestTaskHudLabel.ClearText();
+            if (mSelectedQuest != null && Globals.Me.QuestProgress.ContainsKey(mSelectedQuest.Id))
+            {
+                var playerQuest = Globals.Me.QuestProgress[mSelectedQuest.Id];
+                var currentTask = mSelectedQuest.Tasks.FirstOrDefault(t => t.Id == playerQuest.TaskId);
+
+                if (currentTask != null)
+                {
+                    var wrappedText = WrapText(currentTask.Description, 40);
+                    mQuestTaskHudLabel.AddText(wrappedText, mQuestTaskHudTemplate);
+                }
+            }
+            // --- Fin HUD ---
 
             if (mQuestsWindow.IsHidden)
             {
@@ -361,6 +416,29 @@ namespace Intersect.Client.Interface.Game
                                     );
                                 }
                             }
+                        }
+                        // === Mise à jour du label HUD ===
+                        if (mSelectedQuest != null && Globals.Me.QuestProgress.ContainsKey(mSelectedQuest.Id))
+                        {
+                            var playerQuest = Globals.Me.QuestProgress[mSelectedQuest.Id];
+                            var currentTask = mSelectedQuest.Tasks.FirstOrDefault(t => t.Id == playerQuest.TaskId);
+
+                            // Toujours commencer par effacer l'ancien texte
+                            mQuestTaskHudLabel.ClearText();
+
+                            if (currentTask != null)
+                            {
+                                // Découpe le texte pour ne pas dépasser 40 caractères par ligne
+                                var wrappedText = WrapText(currentTask.Description, 40);
+
+                                // Ajoute le texte en utilisant le template Label
+                                mQuestTaskHudLabel.AddText(wrappedText, mQuestTaskHudTemplate);
+                            }
+                        }
+                        else
+                        {
+                            // S'il n'y a pas de quête sélectionnée ou pas de tâche en cours, on vide le HUD
+                            mQuestTaskHudLabel.ClearText();
                         }
 
                         mQuitButton.IsDisabled = !mSelectedQuest.Quitable;
