@@ -190,6 +190,22 @@ namespace Intersect.Client.Interface.Game
                 {
                     var wrappedText = WrapText(currentTask.Description, 40);
                     mQuestTaskHudLabel.AddText(wrappedText, mQuestTaskHudTemplate);
+
+                    // --- Affiche le nombre de monstres tués si c'est une tâche de type KillNpcs ---
+                    if (currentTask.Objective == QuestObjective.KillNpcs)
+                    {
+                        var progressText = $"{Globals.Me.QuestProgress[mSelectedQuest.Id].TaskProgress} / {currentTask.Quantity} {NpcBase.GetName(currentTask.TargetId)}";
+                        mQuestTaskHudLabel.AddLineBreak();
+                        mQuestTaskHudLabel.AddText(progressText, mQuestTaskHudTemplate);
+                    }
+
+                    // --- Idem pour GatherItems si tu veux le nombre d’objets ---
+                    if (currentTask.Objective == QuestObjective.GatherItems)
+                    {
+                        var progressText = $"{Globals.Me.QuestProgress[mSelectedQuest.Id].TaskProgress} / {currentTask.Quantity} {ItemBase.GetName(currentTask.TargetId)}";
+                        mQuestTaskHudLabel.AddLineBreak();
+                        mQuestTaskHudLabel.AddText(progressText, mQuestTaskHudTemplate);
+                    }
                 }
             }
             // --- Fin HUD ---
