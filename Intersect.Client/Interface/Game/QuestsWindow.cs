@@ -41,8 +41,42 @@ namespace Intersect.Client.Interface.Game
 
         private QuestBase mSelectedQuest;
 
+        // Hud Quête
         private RichLabel mQuestTaskHudLabel;
         private Label mQuestTaskHudTemplate;
+        private long _lastQuestUpdateTime;
+        private const int QuestUpdateInterval = 2000; // 2000 ms = toutes les 2 secondes
+
+        public void Update()
+        {
+            if (Globals.Me == null) return;
+
+            var now = Timing.Global.MillisecondsUtc;
+            if (now - _lastQuestUpdateTime >= QuestUpdateInterval)
+            {
+                UpdateQuestHud(); // juste le HUD
+                _lastQuestUpdateTime = now;
+            }
+        }
+        private void UpdateQuestHud()
+        {
+            if (mSelectedQuest == null || !Globals.Me.QuestProgress.ContainsKey(mSelectedQuest.Id))
+            {
+                mQuestTaskHudLabel.ClearText();
+                return;
+            }
+
+            var playerQuest = Globals.Me.QuestProgress[mSelectedQuest.Id];
+            var currentTask = mSelectedQuest.Tasks.FirstOrDefault(t => t.Id == playerQuest.TaskId);
+
+            mQuestTaskHudLabel.ClearText();
+
+            if (currentTask != null)
+            {
+                var wrappedText = WrapText(currentTask.Description, 40);
+                mQuestTaskHudLabel.AddText(wrappedText, mQuestTaskHudTemplate);
+            }
+        }
 
         //Init
         public QuestsWindow(Canvas gameCanvas)
