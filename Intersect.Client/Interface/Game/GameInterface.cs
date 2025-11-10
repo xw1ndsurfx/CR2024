@@ -1,7 +1,7 @@
 using System;
-
 using Intersect.Client.Core;
 using Intersect.Client.Framework.Gwen.Control;
+using Intersect.Client.Framework.Gwen.Control.EventArguments;
 using Intersect.Client.General;
 using Intersect.Client.Interface.Game.Bag;
 using Intersect.Client.Interface.Game.Bank;
@@ -122,6 +122,30 @@ namespace Intersect.Client.Interface.Game
             mQuestOfferWindow = new QuestOfferWindow(GameCanvas);
             mMapItemWindow = new MapItemWindow(GameCanvas);
             mBankWindow = new BankWindow(GameCanvas);
+
+            // ----- AJOUT DU BOUTON SHOP -----
+            var shopButton = new Button(GameCanvas, "ShopButton");
+            shopButton.SetText("Shop");
+            shopButton.SetBounds(30, 160, 100, 20); // X, Y, width, height (ajuste selon ton interface)
+            shopButton.Clicked += ShopButton_Clicked;
+            GameCanvas.AddChild(shopButton);
+        }
+
+        private void ShopButton_Clicked(Base sender, ClickedEventArgs arguments)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                {
+                    FileName = "https://corpsroyaux.com/shop",
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                // Affiche l'erreur dans la console
+                Console.WriteLine($"Impossible d'ouvrir le shop : {ex.Message}");
+            }
         }
 
         //Chatbox
