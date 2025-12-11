@@ -1152,7 +1152,7 @@ namespace Intersect.Client.Entities
             var srcRectangle = new FloatRect(frame * frameWidth, spriteRow * frameHeight, frameWidth, frameHeight);
             var destRectangle = new FloatRect(
                 (int)Math.Ceiling(Origin.X - frameWidth / 2f),
-                (int)Math.Ceiling(Origin.Y - frameHeight / 2f) - 32,
+                (int)Math.Ceiling(Origin.Y - frameHeight / 2f) -16,
                 srcRectangle.Width,
                 srcRectangle.Height
             );
@@ -1397,7 +1397,7 @@ namespace Intersect.Client.Entities
             var srcRectangle = new FloatRect(frame * frameWidth, spriteRow * frameHeight, frameWidth, frameHeight);
             var destRectangle = new FloatRect(
                 (int)Math.Ceiling(Center.X - frameWidth / 2f),
-                (int)Math.Ceiling(Origin.Y - frameHeight / 2f) - 32,
+                (int)Math.Ceiling(Origin.Y - frameHeight / 2f) - 16,
                 srcRectangle.Width,
                 srcRectangle.Height
             );
@@ -1578,7 +1578,7 @@ namespace Intersect.Client.Entities
 
         public float GetLabelLocation(LabelType type)
         {
-            var y = GetTop() + 32;
+            var y = GetTop() +80;
 
             //Need room for HP bar if not an event.
             if (!(this is Event) && ShouldDrawHpBar)
